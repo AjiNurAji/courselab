@@ -38,10 +38,10 @@
         </ul>
       </div>
       <div class="d-flex align-items-center gap-3">
-        <span class="body-text">Sign In <i data-feather="chevron-right" class="icon-navbar"></i></span>
-        <a href="./pages/signin.html" class="btn btn-primary font-quicksand-700">Get Started</a>
+        <span class="body-text" id="cta-nav">Sign In <i data-feather="chevron-right" class="icon-navbar"></i></span>
+        <a href="./pages/signin.html" class="btn btn-primary font-quicksand-700" id="cta-nav">Get Started</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i data-feather="menu"></i>
         </button>
       </div>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -50,38 +50,31 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 body-text gap-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="./pages/about.html">About</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/courses.html">Courses</a>
             </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="./pages/contact.html">Contact</a>
+            </li>
+            <div class="d-none align-items-center gap-3" id="cta-side">
+              <span class="body-text">Sign In <i data-feather="chevron-right" class="icon-navbar"></i></span>
+              <a href="./pages/signin.html" class="btn btn-primary font-quicksand-700">Get Started</a>
+            </div>
           </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div> 
       </div>
     </div>
   </nav>
 
   <!-- Section Hero -->
-  <section id="hero" class="bg-primary vh-100">
+  <section id="hero" class="bg-primary vh-100 px-md-0 px-3">
     <div id="particles-js"></div>
     <div class="container z-2 position-relative d-flex align-items-end justify-content-center  h-100">
       <div class="left-hero d-flex flex-column gap-3 pb-5 mb-5">
@@ -89,7 +82,7 @@
           Innovate <span class="text-warning">Your</span> <span class="text-warning">Learning</span> Experience with <span class="text-warning">Courselab</span>
         </h1>
         <p class="font-body">Learn anytime, anywhere with expert.</p>
-        <div class="position-relative d-flex align-items-center w-75">
+        <div class="position-relative d-flex align-items-center w-md-75 w-50 w-sm-100">
           <input type="text" name="search" class="input w-100 p-3 rounded font-body" id="search" placeholder="Type your course">
           <a href="#" class="icon-search bg-warning position-absolute me-2 end-0 p-2 rounded d-flex align-items-center justify-content-center">
             <i data-feather="search" class="text-primary"></i>
@@ -115,5 +108,23 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <!-- my js -->
   <script src="./assets/js/index.js"></script>
+  <script>
+    const logo = document.getElementById("logo");
+    const navbar = document.getElementById("navbar");
+
+    const scrollHandle = () => {
+      const scrolY = window.scrollY;
+
+      if (scrolY > 0) {
+        logo.src = "./assets/images/logo.svg";
+        navbar.classList.add("active");
+      } else {
+        logo.src = "./assets/images/logo-white.svg";
+        navbar.classList.remove("active");
+      }
+    };
+
+    window.addEventListener("scroll", scrollHandle);
+  </script>
 </body>
 </html>
