@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Courselab.</title>
-  <meta name="description" content="Innovate your learning experience with Courselab.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courselab.</title>
+    <meta
+      name="description"
+      content="Innovate your learning experience with Courselab."
+    />
 
-  <!-- bootstrap css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-  <!-- my css -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/font.css">
-</head>
-<body>
-  
-  <!-- navbar section -->
-  <nav class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4" id="navbar"                 >
-    <div class="container-fluid container">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/images/logo-white.svg" id="logo" alt="Courselab.">
-      </a>
-      <div class="collapse navbar-collapse font-quicksand-700">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item">
-            <a class="nav-link active" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/courses.html">Courses</a>
-          </li>
-          <li class="nav-item"> 
-            <a class="nav-link" href="./pages/contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <span class="body-text" id="cta-nav">Sign In <i data-feather="chevron-right" class="icon-navbar"></i></span>
-        <a href="./pages/signin.html" class="btn btn-primary font-quicksand-700" id="cta-nav">Get Started</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <i data-feather="menu"></i>
-        </button>
-      </div>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 body-text gap-3">
+    <!-- locomotive scroll css -->
+    <link
+      rel="stylesheet"
+      href="https://github.com/locomotivemtl/locomotive-scroll/blob/master/dist/locomotive-scroll.css"
+    />
+
+    <!-- swiperjs css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/font.css" />
+  </head>
+  <body>
+    <!-- navbar section -->
+    <nav
+      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4"
+      id="navbar"
+    >
+      <div class="container-fluid container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/images/logo-white.svg"
+            id="logo"
+            alt="Courselab."
+          />
+        </a>
+        <div class="collapse navbar-collapse font-quicksand-700">
+          <ul class="navbar-nav gap-3">
             <li class="nav-item">
               <a class="nav-link active" href="/">Home</a>
             </li>
@@ -60,71 +58,458 @@
             <li class="nav-item">
               <a class="nav-link" href="./pages/courses.html">Courses</a>
             </li>
-            <li class="nav-item"> 
+            <li class="nav-item">
               <a class="nav-link" href="./pages/contact.html">Contact</a>
             </li>
-            <div class="d-none align-items-center gap-3" id="cta-side">
-              <span class="body-text">Sign In <i data-feather="chevron-right" class="icon-navbar"></i></span>
-              <a href="./pages/signin.html" class="btn btn-primary font-quicksand-700">Get Started</a>
-            </div>
           </ul>
-        </div> 
-      </div>
-    </div>
-  </nav>
-
-  <!-- Section Hero -->
-  <section id="hero" class="bg-primary vh-100 px-md-0 px-3">
-    <div id="particles-js"></div>
-    <div class="container z-2 position-relative d-flex align-items-end justify-content-center  h-100">
-      <div class="left-hero d-flex flex-column gap-3 pb-5 mb-5">
-        <h1 class="font-quicksand-700 text-white">
-          Innovate <span class="text-warning">Your</span> <span class="text-warning">Learning</span> Experience with <span class="text-warning">Courselab</span>
-        </h1>
-        <p class="font-body">Learn anytime, anywhere with expert.</p>
-        <div class="position-relative d-flex align-items-center w-md-75 w-50 w-sm-100">
-          <input type="text" name="search" class="input w-100 p-3 rounded font-body" id="search" placeholder="Type your course">
-          <a href="#" class="icon-search bg-warning position-absolute me-2 end-0 p-2 rounded d-flex align-items-center justify-content-center">
-            <i data-feather="search" class="text-primary"></i>
-          </a>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <span class="body-text" id="cta-nav"
+            >Sign In <i data-feather="chevron-right" class="icon-navbar"></i
+          ></span>
+          <a
+            href="./pages/signin.html"
+            class="btn btn-primary font-quicksand-700"
+            id="cta-nav"
+            >Get Started</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="./assets/images/logo.svg" />
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-end flex-grow-1 pe-3 body-text gap-3"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/courses.html">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/contact.html">Contact</a>
+              </li>
+              <div class="d-none align-items-center gap-3" id="cta-side">
+                <span class="body-text"
+                  >Sign In
+                  <i data-feather="chevron-right" class="icon-navbar"></i
+                ></span>
+                <a
+                  href="./pages/signin.html"
+                  class="btn btn-primary font-quicksand-700"
+                  >Get Started</a
+                >
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="right-hero d-flex justify-content-center align-items-end">
-        <img src="./assets/images/image-hero.png" alt="hero image" class="hero-image">
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Section proccess -->
-  <section class="bg-light vh-100"></section>
+    <main>
+      <!-- Section Hero -->
+      <section id="hero" class="bg-primary vh-100 px-md-0 px-3">
+        <div id="particles-js"></div>
+        <div
+          class="container z-2 position-relative d-flex align-items-end justify-content-center h-100"
+        >
+          <div class="left-hero d-flex flex-column gap-3 pb-5 mb-5">
+            <h1 class="font-quicksand-700 text-white">
+              Innovate <span class="text-warning">Your</span>
+              <span class="text-warning">Learning</span> Experience with
+              <span class="text-warning">Courselab</span>
+            </h1>
+            <p class="font-body">Learn anytime, anywhere with expert.</p>
+            <div
+              class="position-relative d-flex align-items-center w-md-75 w-sm-100"
+            >
+              <input
+                type="text"
+                name="search"
+                class="input w-100 p-3 rounded font-body"
+                id="search"
+                placeholder="Type your course"
+              />
+              <a
+                href="#"
+                class="icon-search bg-warning position-absolute me-2 end-0 p-2 rounded d-flex align-items-center justify-content-center"
+              >
+                <i data-feather="search" class="text-primary"></i>
+              </a>
+            </div>
+          </div>
+          <div class="right-hero d-flex justify-content-center align-items-end">
+            <img
+              src="./assets/images/image-hero.png"
+              alt="hero image"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </section>
 
-  <!-- bootstrap js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <!-- Section proccess -->
+      <section class="bg-light-blue py-5" id="process">
+        <div
+          class="container d-flex flex-column gap-5 justify-content-center align-items-center"
+        >
+          <div class="heading text-center">
+            <h2 class="font-quicksand-700 text-primary">
+              Learning Process for Join & Benefit
+            </h2>
+            <p class="font-body">Get benefits and experience with us</p>
+          </div>
+          <div class="row row-cols-1 row-cols-md-3 g-5 position-relative">
+            <div class="col">
+              <div class="card h-100 text-start">
+                <div class="card-icon bg-primary position-relative">
+                  <i data-feather="search"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="text-capitalize font-quicksand-700">
+                    find course
+                  </h5>
+                  <p class="font-body">
+                    We help in learning, the material is easy to understand and
+                    very good.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img class="arrow1" src="./assets/images/arrow.svg" />
+            <div class="col">
+              <div class="card h-100 text-start">
+                <div class="card-icon bg-primary position-relative">
+                  <i data-feather="calendar"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="text-capitalize font-quicksand-700">
+                    book your seat
+                  </h5>
+                  <p class="font-body">
+                    Determine your course and get the best material from us.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img class="arrow2" src="./assets/images/arrow.svg" />
+            <div class="col">
+              <div class="card h-100 text-start">
+                <div class="card-icon bg-primary position-relative">
+                  <i data-feather="award"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="text-capitalize font-quicksand-700">
+                    get cercificate
+                  </h5>
+                  <p class="font-body">
+                    Get a certificate after completing learning at CourseLab.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- particle js -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+      <!-- Section popular corse -->
+      <section
+        class="bg-primary position-relative overflow-hidden"
+        id="popular"
+      >
+        <div id="particle-course"></div>
+        <div
+          class="container py-5 d-flex flex-column gap-5 justify-content-center align-items-start"
+        >
+          <div class="heading text-start w-100 py-5">
+            <h2 class="font-quicksand-700 text-white text-capitalize">
+              most popular courses
+            </h2>
+            <p class="font-body">
+              Online education platform is very easy way to learn anything from
+              anywhere. Now a day.
+            </p>
+          </div>
+          <div class="row row-cols-1 row-cols-md-3 g-4 w-100 pb-5">
+            <div class="col">
+              <a href="./pages/courses.html" class="text-decoration-none">
+                <div class="card h-100">
+                  <div class="card-image">
+                    <img
+                      src="./assets/images/web-dev.webp"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="font-quicksand-700 text-capitalize">
+                      website development
+                    </h5>
+                    <div
+                      class="information d-flex gap-1 flex-column justify-content-center align-items-start"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="users"></i>
+                        </div>
+                        <p class="subject font-body">350+</p>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="book"></i>
+                        </div>
+                        <p class="subject font-body">3 Topic • 15 Material</p>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="star"></i>
+                        </div>
+                        <p class="subject font-body">4,6/5</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="./pages/courses.html" class="text-decoration-none">
+                <div class="card h-100">
+                  <div class="card-image">
+                    <img
+                      src="./assets/images/ui-ux.webp"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="font-quicksand-700 text-capitalize">
+                      UI/UX Design
+                    </h5>
+                    <div
+                      class="information d-flex gap-1 flex-column justify-content-center align-items-start"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="users"></i>
+                        </div>
+                        <p class="subject font-body">150</p>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="book"></i>
+                        </div>
+                        <p class="subject font-body">1 Topic • 5 Material</p>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="star"></i>
+                        </div>
+                        <p class="subject font-body">4,6/5</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="./pages/courses.html" class="text-decoration-none">
+                <div class="card h-100">
+                  <div class="card-image">
+                    <img
+                      src="./assets/images/english.webp"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="font-quicksand-700 text-capitalize">
+                      english language
+                    </h5>
+                    <div
+                      class="information d-flex gap-1 flex-column justify-content-center align-items-start"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="users"></i>
+                        </div>
+                        <p class="subject font-body">250</p>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="book"></i>
+                        </div>
+                        <p class="subject font-body">1 Topic • 5 Material</p>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon">
+                          <i data-feather="star"></i>
+                        </div>
+                        <p class="subject font-body">4,6/5</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- feather icon -->
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <!-- my js -->
-  <script src="./assets/js/index.js"></script>
-  <script>
-    const logo = document.getElementById("logo");
-    const navbar = document.getElementById("navbar");
+      <!-- testimonial -->
+      <section id="testimoni" class="py-5 bg-light-blue vh-100 d-flex justify-content-centerlign-items-center">
+        <div class="container d-flex flex-row-reverse align-items-center gap-5">
+          <div class="heading text-end">
+            <h2 class="font-quicksand-700 text-primary text-capitalize">
+              student talk about CourseLab
+            </h2>
+            <p class="font-body">
+              Let's voice the learning experience from one of our students who has completed the course.
+            </p>
+          </div>
 
-    const scrollHandle = () => {
-      const scrolY = window.scrollY;
+          <div class="swiper bg-primary">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide d-flex align-items-center justify-content-center">
+                <div class="card w-50">
+                  <img src="./assets/images/petik.svg" alt=".." class="bg-petik">
+                  <div class="card-profile" data-name="kelvin">
+                    <img src="./assets/images/kelvin.jpg" alt="kelvin">
+                  </div>
+                  <div class="card-body">
+                    <p class="font-quicksand-700 py-5 text-center">
+                      "Studying at CourseLab is fun. learn from the beginning, over time it gradually becomes difficult and enjoyable. The module is also good."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex align-items-center justify-content-center">
+                <div class="card w-50">
+                  <img src="./assets/images/petik.svg" alt=".." class="bg-petik">
+                  <div class="card-profile" data-name="rahma">
+                    <img src="./assets/images/rahma.jpg" alt="rahma">
+                  </div>
+                  <div class="card-body">
+                    <p class="font-quicksand-700 py-5 text-center">
+                      "Courselab helps me in studying, the material is understandable and very good."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex align-items-center justify-content-center">
+                <div class="card w-50">
+                  <img src="./assets/images/petik.svg" alt=".." class="bg-petik">
+                  <div class="card-profile" data-name="zahra">
+                    <img src="./assets/images/zahra.jpg" alt="zahra">
+                  </div>
+                  <div class="card-body">
+                    <p class="font-quicksand-700 py-5 text-center">
+                      "The class is very fun and really helps me in studying."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      if (scrolY > 0) {
-        logo.src = "./assets/images/logo.svg";
-        navbar.classList.add("active");
-      } else {
-        logo.src = "./assets/images/logo-white.svg";
-        navbar.classList.remove("active");
-      }
-    };
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
-    window.addEventListener("scroll", scrollHandle);
-  </script>
-</body>
+    <!-- particle js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- feather icon -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!-- locomotive scrool js -->
+    <script src="https://github.com/locomotivemtl/locomotive-scroll/blob/master/dist/locomotive-scroll.min.js"></script>
+
+    <!-- swiperjs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- my js -->
+    <script src="./assets/js/index.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        // loop: true,
+
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+      });
+    </script>
+    <script>
+      import LocomotiveScroll from "locomotive-scroll";
+
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+    </script>
+    <script>
+      const logo = document.getElementById("logo");
+      const navbar = document.getElementById("navbar");
+
+      const scrollHandle = () => {
+        const scrolY = window.scrollY;
+
+        if (scrolY > 0) {
+          logo.src = "./assets/images/logo.svg";
+          navbar.classList.add("active");
+        } else {
+          logo.src = "./assets/images/logo-white.svg";
+          navbar.classList.remove("active");
+        }
+      };
+
+      window.addEventListener("scroll", scrollHandle);
+    </script>
+  </body>
 </html>
