@@ -136,7 +136,10 @@
 
     <main>
       <!-- Section Hero -->
-      <section id="hero" class="bg-primary vh-100 px-md-0 px-3">
+      <section
+        id="hero"
+        class="bg-primary vh-100 px-md-0 px-3 position-relative"
+      >
         <div id="particles-js"></div>
         <div
           class="container z-2 position-relative d-flex align-items-end justify-content-center h-100"
@@ -177,7 +180,7 @@
       </section>
 
       <!-- Section proccess -->
-      <section class="bg-light-blue py-5" id="process">
+      <section class="bg-light-blue px-md-0 px-3 py-5" id="process">
         <div
           class="container d-flex flex-column gap-5 justify-content-center align-items-center"
         >
@@ -242,7 +245,7 @@
 
       <!-- Section popular corse -->
       <section
-        class="bg-primary position-relative overflow-hidden"
+        class="bg-primary position-relative overflow-hidden px-md-0 px-3"
         id="popular"
       >
         <div id="particle-course"></div>
@@ -258,7 +261,7 @@
               anywhere. Now a day.
             </p>
           </div>
-          <div class="row row-cols-1 row-cols-md-3 g-4 w-100 pb-5">
+          <div class="d-grid gap-3 w-100 pb-5">
             <div class="col">
               <a href="./pages/courses.html" class="text-decoration-none">
                 <div class="card h-100">
@@ -384,14 +387,17 @@
       </section>
 
       <!-- testimonial -->
-      <section id="testimoni" class="py-5 bg-light-blue vh-100 d-flex justify-content-centerlign-items-center">
-        <div class="container d-flex flex-row-reverse align-items-center gap-5">
+      <section id="testimoni" class="py-5 bg-light-blue px-md-0 px-3">
+        <div
+          class="container d-flex h-100 flex-column flex-xl-row-reverse align-items-center gap-5"
+        >
           <div class="heading text-end">
             <h2 class="font-quicksand-700 text-primary text-capitalize">
               student talk about CourseLab
             </h2>
             <p class="font-body">
-              Let's voice the learning experience from one of our students who has completed the course.
+              Let's voice the learning experience from one of our students who
+              has completed the course.
             </p>
           </div>
 
@@ -399,37 +405,58 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide d-flex align-items-center justify-content-center">
+              <div
+                class="swiper-slide d-flex align-items-center justify-content-center"
+              >
                 <div class="card w-50">
-                  <img src="./assets/images/petik.svg" alt=".." class="bg-petik">
+                  <img
+                    src="./assets/images/petik.svg"
+                    alt=".."
+                    class="bg-petik"
+                  />
                   <div class="card-profile" data-name="kelvin">
-                    <img src="./assets/images/kelvin.jpg" alt="kelvin">
+                    <img src="./assets/images/kelvin.jpg" alt="kelvin" />
                   </div>
                   <div class="card-body">
                     <p class="font-quicksand-700 py-5 text-center">
-                      "Studying at CourseLab is fun. learn from the beginning, over time it gradually becomes difficult and enjoyable. The module is also good."
+                      "Studying at CourseLab is fun. learn from the beginning,
+                      over time it gradually becomes difficult and enjoyable.
+                      The module is also good."
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide d-flex align-items-center justify-content-center">
+              <div
+                class="swiper-slide d-flex align-items-center justify-content-center"
+              >
                 <div class="card w-50">
-                  <img src="./assets/images/petik.svg" alt=".." class="bg-petik">
+                  <img
+                    src="./assets/images/petik.svg"
+                    alt=".."
+                    class="bg-petik"
+                  />
                   <div class="card-profile" data-name="rahma">
-                    <img src="./assets/images/rahma.jpg" alt="rahma">
+                    <img src="./assets/images/rahma.jpg" alt="rahma" />
                   </div>
                   <div class="card-body">
                     <p class="font-quicksand-700 py-5 text-center">
-                      "Courselab helps me in studying, the material is understandable and very good."
+                      "Courselab helps me in studying, the material is
+                      understandable and very good."
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide d-flex align-items-center justify-content-center">
+              <div
+                class="swiper-slide d-flex align-items-center justify-content-center"
+              >
                 <div class="card w-50">
-                  <img src="./assets/images/petik.svg" alt=".." class="bg-petik">
+                  <img
+                    src="./assets/images/petik.svg"
+                    alt=".."
+                    class="bg-petik"
+                  />
                   <div class="card-profile" data-name="zahra">
-                    <img src="./assets/images/zahra.jpg" alt="zahra">
+                    <img src="./assets/images/zahra.jpg" alt="zahra" />
                   </div>
                   <div class="card-body">
                     <p class="font-quicksand-700 py-5 text-center">
@@ -444,7 +471,104 @@
           </div>
         </div>
       </section>
+
+      <!-- cta -->
+      <section
+        id="cta"
+        class="py-5 bg-primary px-md-0 px-3 overflow-hidden position-relative"
+      >
+        <div
+          id="particle-cta"
+          class="position-absolute w-100 top-0 start-0 z-1"
+        ></div>
+        <div
+          class="container position-relative z-3 text-white text-center d-flex flex-column gap-4 justify-content-center align-items-center"
+        >
+          <h2 class="font-quicksand-700">
+            Explore Courses, Ignite Your Potential! Enroll with CourseLab Today!
+          </h2>
+          <p class="font-body">
+            Seize the opportunity to enhance your skills, broaden your
+            knowledge, and unlock new possibilities! Enroll now and empower
+            yourself for success. Let's turn your aspirations into achievements
+            together!
+          </p>
+          <a
+            href="./pages/signin.html"
+            class="btn btn-warning font-quicksand-700 text-capitalize text-primary"
+            >get started</a
+          >
+        </div>
+      </section>
     </main>
+
+    <footer id="footer" class="py-5 px-md-0 px-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="widget subscribe no-box">
+                <h5 class="widget-title">
+                  <img src="./assets/images/logo-white.svg" alt="">
+                  <span></span></h5>
+                <p class="font-body">CourseLab is your dedicated platform for transformative learning experiences.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="widget no-box">
+                <h5 class="widget-title font-quicksand-600">Quick Links<span></span></h5>
+                <ul class="thumbnail-widget">
+                  <li>
+                    <a href="./index.html" class="font-body text-decoration-none">Home</a>
+                  </li>
+                  <li>
+                    <a href="./pages/about.html" class="font-body text-decoration-none">About</a>
+                  </li>
+                  <li>
+                    <a href="./pages/courses.html" class="font-body text-decoration-none">Courses</a>
+                  </li>
+                  <li>
+                    <a href="./pages/contact.html" class="font-body text-decoration-none">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="widget no-box">
+                <h5 class="widget-title font-quicksand-600">Location<span></span></h5>
+                <p class="font-body">Cikeusik, Cidahu, Kuningan, West Java.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="widget no-box">
+                <h5 class="widget-title font-quicksand-600">Contact Us<span></span></h5>
+
+                <p>
+                  <a href="#" class="font-body text-decoration-none"
+                    >admin@courselab.com</a
+                  >
+                </p>
+                <div class="d-flex mt-2 justify-content-start align-items-center gap-3">
+                  <a href="" class="icon-footer">
+                    <i data-feather="instagram"></i>
+                  </a>
+                  <a href="" class="icon-footer">
+                    <i data-feather="youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="py-4">
+        <div class="container text-center">
+          <p class="font-body text-white">Copyright CourseLab. &copy; 2023. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- bootstrap js -->
     <script
@@ -481,7 +605,7 @@
         // If we need pagination
         pagination: {
           el: ".swiper-pagination",
-          clickable: true
+          clickable: true,
         },
       });
     </script>
