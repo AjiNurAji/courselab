@@ -17,16 +17,20 @@
       crossorigin="anonymous"
     />
 
-    <!-- locomotive scroll css -->
-    <link
-      rel="stylesheet"
-      href="https://github.com/locomotivemtl/locomotive-scroll/blob/master/dist/locomotive-scroll.css"
-    />
-
     <!-- swiperjs css -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- wow js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
     <!-- my css -->
@@ -36,8 +40,10 @@
   <body>
     <!-- navbar section -->
     <nav
-      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4"
+      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4 wow bounceInDown"
       id="navbar"
+      data-wow-duration="0.5s"
+      data-wow-delay="0.6s"
     >
       <div class="container-fluid container">
         <a class="navbar-brand" href="#">
@@ -144,7 +150,7 @@
         <div
           class="container z-2 position-relative d-flex align-items-end justify-content-center h-100"
         >
-          <div class="left-hero d-flex flex-column gap-3 pb-5 mb-5">
+          <div class="left-hero d-flex flex-column gap-3 pb-5 mb-5 wow rollIn" data-wow-delay="0.1s" data-wow-duration="0.5s">
             <h1 class="font-quicksand-700 text-white">
               Innovate <span class="text-warning">Your</span>
               <span class="text-warning">Learning</span> Experience with
@@ -169,7 +175,7 @@
               </a>
             </div>
           </div>
-          <div class="right-hero d-flex justify-content-center align-items-end">
+          <div class="right-hero d-flex justify-content-center align-items-end wow lightSpeedIn" data-wow-delay="0.5s"  data-wow-duration="0.5s">
             <img
               src="./assets/images/image-hero.png"
               alt="hero image"
@@ -191,7 +197,7 @@
             <p class="font-body">Get benefits and experience with us</p>
           </div>
           <div class="row row-cols-1 row-cols-md-3 g-5 position-relative">
-            <div class="col">
+            <div class="col wow rollIn center">
               <div class="card h-100 text-start">
                 <div class="card-icon bg-primary position-relative">
                   <i data-feather="search"></i>
@@ -208,7 +214,7 @@
               </div>
             </div>
             <img class="arrow1" src="./assets/images/arrow.svg" />
-            <div class="col">
+            <div class="col wow pulse" data-wow-iteration="5" data-wow-duration="0.15s">
               <div class="card h-100 text-start">
                 <div class="card-icon bg-primary position-relative">
                   <i data-feather="calendar"></i>
@@ -224,7 +230,7 @@
               </div>
             </div>
             <img class="arrow2" src="./assets/images/arrow.svg" />
-            <div class="col">
+            <div class="col wow bounceInRight center">
               <div class="card h-100 text-start">
                 <div class="card-icon bg-primary position-relative">
                   <i data-feather="award"></i>
@@ -252,17 +258,20 @@
         <div
           class="container py-5 d-flex flex-column gap-5 justify-content-center align-items-start"
         >
-          <div class="heading text-start w-100 py-5">
-            <h2 class="font-quicksand-700 text-white text-capitalize">
+          <div class="heading text-start w-100 py-5 d-flex justify-content-between align-items-center">
+            <div class="wow bounceInLeft"><h2 class="font-quicksand-700 text-white text-capitalize">
               most popular courses
             </h2>
             <p class="font-body">
               Online education platform is very easy way to learn anything from
               anywhere. Now a day.
-            </p>
+            </p></div>
+            <div class="wow bounceInRight">
+              <a href="./pages/courses.html" class="btn btn-warning text-capitalize font-quicksand-600">see all courses</a>
+            </div>
           </div>
           <div class="d-grid gap-3 w-100 pb-5">
-            <div class="col">
+            <div class="col wow bounceInUp center" data-wow-delay="0.05s">
               <a href="./pages/courses.html" class="text-decoration-none">
                 <div class="card h-100">
                   <div class="card-image">
@@ -302,7 +311,7 @@
                 </div>
               </a>
             </div>
-            <div class="col">
+            <div class="col wow bounceInUp center" data-wow-delay="0.05s">
               <a href="./pages/courses.html" class="text-decoration-none">
                 <div class="card h-100">
                   <div class="card-image">
@@ -342,7 +351,7 @@
                 </div>
               </a>
             </div>
-            <div class="col">
+            <div class="col wow bounceInUp center" data-wow-delay="0.05s">
               <a href="./pages/courses.html" class="text-decoration-none">
                 <div class="card h-100">
                   <div class="card-image">
@@ -391,7 +400,7 @@
         <div
           class="container d-flex h-100 flex-column flex-xl-row-reverse align-items-center gap-5"
         >
-          <div class="heading text-end">
+          <div class="heading text-end wow bounceInRight">
             <h2 class="font-quicksand-700 text-primary text-capitalize">
               student talk about CourseLab
             </h2>
@@ -482,7 +491,8 @@
           class="position-absolute w-100 top-0 start-0 z-1"
         ></div>
         <div
-          class="container position-relative z-3 text-white text-center d-flex flex-column gap-4 justify-content-center align-items-center"
+          data-wow-iteration="3" data-wow-duration="0.15s"
+          class="container wow pulse position-relative z-3 text-white text-center d-flex flex-column gap-4 justify-content-center align-items-center"
         >
           <h2 class="font-quicksand-700">
             Explore Courses, Ignite Your Potential! Enroll with CourseLab Today!
@@ -503,69 +513,97 @@
     </main>
 
     <footer id="footer" class="py-5 px-md-0 px-3">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <div class="widget subscribe no-box">
-                <h5 class="widget-title">
-                  <img src="./assets/images/logo-white.svg" alt="">
-                  <span></span></h5>
-                <p class="font-body">CourseLab is your dedicated platform for transformative learning experiences.</p>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget subscribe no-box">
+              <h5 class="widget-title">
+                <img src="./assets/images/logo-white.svg" alt="" />
+                <span></span>
+              </h5>
+              <p class="font-body">
+                CourseLab is your dedicated platform for transformative learning
+                experiences.
+              </p>
             </div>
+          </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <div class="widget no-box">
-                <h5 class="widget-title font-quicksand-600">Quick Links<span></span></h5>
-                <ul class="thumbnail-widget">
-                  <li>
-                    <a href="./index.html" class="font-body text-decoration-none">Home</a>
-                  </li>
-                  <li>
-                    <a href="./pages/about.html" class="font-body text-decoration-none">About</a>
-                  </li>
-                  <li>
-                    <a href="./pages/courses.html" class="font-body text-decoration-none">Courses</a>
-                  </li>
-                  <li>
-                    <a href="./pages/contact.html" class="font-body text-decoration-none">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <div class="widget no-box">
-                <h5 class="widget-title font-quicksand-600">Location<span></span></h5>
-                <p class="font-body">Cikeusik, Cidahu, Kuningan, West Java.</p>
-              </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <div class="widget no-box">
-                <h5 class="widget-title font-quicksand-600">Contact Us<span></span></h5>
-
-                <p>
-                  <a href="#" class="font-body text-decoration-none"
-                    >admin@courselab.com</a
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Quick Links<span></span>
+              </h5>
+              <ul class="thumbnail-widget">
+                <li>
+                  <a href="./index.html" class="font-body text-decoration-none"
+                    >Home</a
                   >
-                </p>
-                <div class="d-flex mt-2 justify-content-start align-items-center gap-3">
-                  <a href="" class="icon-footer">
-                    <i data-feather="instagram"></i>
-                  </a>
-                  <a href="" class="icon-footer">
-                    <i data-feather="youtube"></i>
-                  </a>
-                </div>
+                </li>
+                <li>
+                  <a
+                    href="./pages/about.html"
+                    class="font-body text-decoration-none"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/courses.html"
+                    class="font-body text-decoration-none"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/contact.html"
+                    class="font-body text-decoration-none"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Location<span></span>
+              </h5>
+              <p class="font-body">Cikeusik, Cidahu, Kuningan, West Java.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Contact Us<span></span>
+              </h5>
+
+              <p>
+                <a href="#" class="font-body text-decoration-none"
+                  >admin@courselab.com</a
+                >
+              </p>
+              <div
+                class="d-flex mt-2 justify-content-start align-items-center gap-3"
+              >
+                <a href="" class="icon-footer">
+                  <i data-feather="instagram"></i>
+                </a>
+                <a href="" class="icon-footer">
+                  <i data-feather="youtube"></i>
+                </a>
               </div>
             </div>
           </div>
+        </div>
       </div>
 
       <div class="py-4">
         <div class="container text-center">
-          <p class="font-body text-white">Copyright CourseLab. &copy; 2023. All rights reserved.</p>
+          <p class="font-body text-white">
+            Copyright CourseLab. &copy; 2023. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
@@ -583,39 +621,16 @@
     <!-- feather icon -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-    <!-- locomotive scrool js -->
-    <script src="https://github.com/locomotivemtl/locomotive-scroll/blob/master/dist/locomotive-scroll.min.js"></script>
-
     <!-- swiperjs -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- wow js -->
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
 
     <!-- my js -->
     <script src="./assets/js/index.js"></script>
     <script>
-      const swiper = new Swiper(".swiper", {
-        // Optional parameters
-        // loop: true,
-
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-    <script>
-      import LocomotiveScroll from "locomotive-scroll";
-
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true,
-      });
+      new WOW().init();
     </script>
     <script>
       const logo = document.getElementById("logo");
@@ -634,6 +649,24 @@
       };
 
       window.addEventListener("scroll", scrollHandle);
+    </script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        // loop: true,
+
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
     </script>
   </body>
 </html>

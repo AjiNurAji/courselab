@@ -389,6 +389,11 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
 }
 
+#courses .d-grid {
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)) !important;
+}
+
+#courses .card,
 #popular .card {
   background: var(--color-light-blue) !important;
   overflow: hidden;
@@ -401,11 +406,13 @@ p {
   padding: 10px !important;
 }
 
+#courses .card:hover
 #popular .card:hover {
   opacity: 0.9;
   scale: 1.03;
 }
 
+#courses .card .card-image,
 #popular .card .card-image {
   overflow: hidden !important;
   width: 100%;
@@ -417,6 +424,7 @@ p {
   -o-border-radius: 20px;
 }
 
+#courses .card img,
 #popular .card img {
   object-fit: cover;
   height: 100%;
@@ -424,12 +432,14 @@ p {
   object-position: center;
 }
 
+#courses .card .icon svg,
 #popular .card .icon svg {
   width: 15px;
   height: auto;
-  stroke: var(--color-blue);
+  stroke: var(--color-blue) !important;
 }
 
+#courses .card .information p,
 #popular .card .information p {
   font-size: 15px !important;
 }
@@ -644,6 +654,10 @@ footer a:hover {
     gap: 1rem;
   }
 
+  #courses .d-grid {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)) !important;
+  }
+
   .left-hero,
   .right-hero {
     flex: 0 0 100%;
@@ -701,6 +715,10 @@ footer a:hover {
     -moz-transform: translate(50px, 20px);
     -ms-transform: translate(50px, 20px);
     -o-transform: translate(50px, 20px);
+  }
+
+  #courses .d-grid {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr)) !important;
   }
 }
 
