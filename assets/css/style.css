@@ -5,6 +5,7 @@
   --color-black: #232323;
   --color-gray: #728196;
   --color-yellow: #fed53a;
+  --color-red: #C0012D;
   --border-radius: 25px;
 }
 
@@ -28,6 +29,10 @@ input {
 
 p {
   margin: 0 !important;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* bg edited */
@@ -60,15 +65,20 @@ p {
   color: var(--color-black) !important;
 }
 
+.text-danger {
+  color: var(--color-red) !important;
+}
+
 /* Navbar edited */
 .navbar {
   z-index: 9999;
 }
 
 .navbar.active {
-  background: var(--color-white);
   position: fixed !important;
-  padding: 1rem 0 !important;
+  background: var(--color-white);
+  padding: .5rem 0 !important;
+  box-shadow: 0 0 5px var(--color-black);
 }
 
 .icon-navbar {
@@ -118,20 +128,26 @@ p {
   width: 100%;
 }
 
+
+.offcanvas .nav-link:hover::before,
+.offcanvas .nav-link.active:hover::before,
 .nav-link:hover::before {
   background: var(--color-yellow) !important;
 }
 
+.offcanvas .nav-link.active,
 .navbar.active .nav-link.active {
   color: var(--color-blue) !important;
 }
 
+.offcanvas .nav-link:hover,
 .navbar.active .nav-link:hover {
   color: var(--color-yellow) !important;
 }
 
+.offcanvas .nav-link.active::before,
 .navbar.active .nav-link::before {
-  background: var(--color-blue);
+  background: var(--color-blue) !important;
 }
 
 .navbar-toggler {
@@ -192,12 +208,15 @@ p {
 .navbar-toggler:focus,
 .navbar-toggler:hover,
 .btn-primary:hover,
+.navbar .btn-primary:hover,
 .btn-warning:hover {
   background: var(--color-light-blue) !important;
   color: var(--color-blue) !important;
-  box-shadow: 0 0 10px var(--color-light-blue);
+  box-shadow: 0 0 10px var(--color-light-blue) !important;
 }
 
+#signin .btn-primary:hover,
+#team .btn-primary:hover,
 .navbar.active .navbar-toggler:hover,
 .navbar.active .btn-primary:hover {
   background: var(--color-yellow) !important;
@@ -273,8 +292,17 @@ p {
   box-shadow: 0 0 10px var(--color-yellow);
 }
 
+.form-check-input,
+#signin .input,
+#contact .input {
+  border: 1px solid var(--color-gray) !important;
+}
+
+.form-check-input,
+#signin .input:focus,
 #contact .input:focus {
   box-shadow: 0 0 10px #00327c44;
+  border: 1px solid var(--color-blue) !important;
 }
 
 /* process card style */
@@ -331,7 +359,6 @@ p {
 }
 
 .arrow1 {
-  transform: rotateX(-180deg);
   top: 15px;
   left: 150px;
 }
@@ -385,12 +412,12 @@ p {
   opacity: 0.8;
 }
 
-#popular .d-grid {
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+#team .d-grid {
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)) !important;
 }
 
 #courses .d-grid {
-  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)) !important;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
 }
 
 #courses .card,
@@ -403,13 +430,27 @@ p {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   border: none !important;
-  padding: 10px !important;
+  width: 200px;
 }
 
-#courses .card:hover
-#popular .card:hover {
-  opacity: 0.9;
-  scale: 1.03;
+/* #popular .col {
+  width: 100%;
+} */
+
+/* #popular .card .card-body {
+  padding: 10px !important;
+} */
+
+#popular .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#courses .col a:hover .card,
+#popular .col a:hover .card {
+  opacity: 0.95 !important;
+  scale: 1.03 !important;
 }
 
 #courses .card .card-image,
@@ -439,9 +480,22 @@ p {
   stroke: var(--color-blue) !important;
 }
 
-#courses .card .information p,
-#popular .card .information p {
-  font-size: 15px !important;
+#courses .card .icon .subject,
+#popular .card .icon .subject {
+  font-size: 12px !important;
+}
+
+#courses .card .category,
+#popular .card .category {
+  background: #fed53a40;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  padding: 5px 10px;
+  font-size: 10px !important;
+  width: fit-content;
 }
 
 /* testimoni */
@@ -472,6 +526,7 @@ p {
 
 .swiper .card .card-body {
   position: relative;
+  overflow: hidden;
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -499,7 +554,7 @@ p {
   -ms-transform: translate(40px, -30px);
   -o-transform: translate(40px, -30px);
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 .card-profile img {
@@ -541,7 +596,7 @@ p {
   left: 10px;
   width: 70%;
   height: auto;
-  z-index: 1;
+  z-index: -2;
   rotate: 180deg;
 }
 
@@ -643,15 +698,43 @@ footer a:hover {
   stroke: var(--color-blue);
 }
 
+.copy {
+  border-top: 1px solid var(--color-gray);
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+.box {
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+
 @media (max-width: 992px) {
-  #hero {
+  #about p {
+    width: 100% !important;
+  }
+
+  #hero, #popular .container {
     height: auto !important;
   }
+
   #hero .container {
     flex-direction: column !important;
-    padding-top: 10rem;
-    padding-bottom: 0 !important;
     gap: 1rem;
+    height: auto !important;
+  }
+
+  #team .d-grid {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr)) !important;
   }
 
   #courses .d-grid {
@@ -664,11 +747,9 @@ footer a:hover {
   }
 
   .left-hero {
+    padding-top: 10rem;
     padding-bottom: 0 !important;
-  }
-
-  #popular .col {
-    flex: 0 0 33%;
+    overflow: hidden;
   }
 
   .arrow1,
@@ -687,6 +768,10 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+  #team .email {
+    font-size: 15px;
+  }
+
   .arrow1,
   .arrow2 {
     display: none;
@@ -700,8 +785,20 @@ footer a:hover {
     width: 70% !important;
   }
 
-  #popular .d-grid {
-    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  #popular .heading {
+    align-items: flex-start !important;
+  }
+
+  #courses .col .card {
+    width: 100% !important;
+  }
+
+  #popular .row>* {
+    width: auto;
+  }
+
+  #popular .row {
+    gap: 10px;
   }
 
   .card-profile {
@@ -726,6 +823,10 @@ footer a:hover {
   .w-md-75 {
     width: 75% !important;
   }
+
+  #signup {
+    height: auto !important;
+  }
 }
 
 @media (max-width: 590px) {
@@ -737,11 +838,19 @@ footer a:hover {
     width: 100% !important;
   }
 
-  #popular .d-grid {
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-  }
-
   #process .g-5 {
     --bs-gutter-x: 1.5rem !important;
+  }
+
+  #popular .row .card {
+    width: 100%;
+  }
+
+  #courses .d-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+  }
+
+  #team .d-grid {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)) !important;
   }
 }

@@ -1,152 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Courselab.</title>
-  <meta name="description" content="Innovate your learning experience with Courselab.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courselab. | About</title>
+    <meta
+      name="description"
+      content="Innovate your learning experience with Courselab."
+    />
 
-  <!-- bootstrap css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" href="../assets/images/logos/favicon.svg" />
 
-  <!-- my css -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/font.css">
-  <link rel="stylesheet" href="../assets/css/about-style.css">
-</head>
-<body>
-  
-  <!-- navbar section -->
-  <nav class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4" id="navbar"                 >
-    <div class="container-fluid container">
-      <a class="navbar-brand" href="#">
-        <img src="../assets/images/logo-white.svg" id="logo" alt="Courselab.">
-      </a>
-      <div class="collapse navbar-collapse font-quicksand-700">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="./about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./courses.html">Courses</a>
-          </li>
-          <li class="nav-item"> 
-            <a class="nav-link" href="./contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <span class="body-text" id="cta-nav">Sign In <i data-feather="chevron-right" class="icon-navbar"></i></span>
-        <a href="../signin.html" class="btn btn-primary font-quicksand-700" id="cta-nav">Get Started</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <i data-feather="menu"></i>
-        </button>
-      </div>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 body-text gap-3">
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- wow js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+  </head>
+  <body>
+    <!-- navbar section -->
+    <nav
+      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4"
+      id="navbar"
+    >
+      <div class="container-fluid container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../assets/images/logos/logo-white.svg"
+            id="logo"
+            alt="Courselab."
+          />
+        </a>
+        <div class="collapse navbar-collapse font-quicksand-700">
+          <ul class="navbar-nav gap-3">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
+              <a class="nav-link active" href="./about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./courses.html">Courses</a>
+              <a class="nav-link " href="./courses.html">Courses</a>
             </li>
-            <li class="nav-item"> 
-              <a class="nav-link active" href="./contact.html">Contact</a>
+            <li class="nav-item">
+              <a class="nav-link " href="./contact.html">Contact</a>
             </li>
-            <div class="d-none align-items-center gap-3" id="cta-side">
-              <span class="body-text">Sign In <i data-feather="chevron-right" class="icon-navbar"></i></span>
-              <a href="./signin.html" class="btn btn-primary font-quicksand-700">Get Started</a>
-            </div>
           </ul>
-        </div> 
-      </div>
-    </div>
-  </nav>
-
-
-  <div class="about-section">
-    <h1>About Us Page</h1>
-    <p>CourseLab is a website that provides various educational needs for all groups. We have courses, learning materials, webinars, and much more to support your academic needs.</p>
-  </div>
-  
-  <h2 style="text-align:center" class="team">Our Team</h2>
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="../assets/images/Male-1.png" alt="Jane" style="width:100%">
-        <div class="container profile">
-          <h3>Aji Nur Aji</h3>
-          <p class="title">Programmer and Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>jane@example.com</p>
-          <p><button class="button">Contact</button></p>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <span class="body-text" id="cta-nav"
+            >Sign In <i data-feather="chevron-right" class="icon-navbar"></i
+          ></span>
+          <a
+            href="./signin.html"
+            class="btn btn-primary font-quicksand-700"
+            id="cta-nav"
+            >Get Started</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="../assets/images/logos/logo.svg" />
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-end flex-grow-1 pe-3 body-text gap-3"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./courses.html">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+              <div class="d-none align-items-center gap-3" id="cta-side">
+                <span class="body-text"
+                  >Sign In
+                  <i data-feather="chevron-right" class="icon-navbar"></i
+                ></span>
+                <a
+                  href="./signin.html"
+                  class="btn btn-primary font-quicksand-700"
+                  >Get Started</a
+                >
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="../assets/images/Male-2.png" alt="Mike" style="width:100%">
-        <div class="container profile">
-          <h3>Muhamad Reza P.</h3>
-          <p class="title">Programmer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>mrezap1706@gmail.com</p>
-          <p><button class="button">Contact</button></p>
+    </nav>
+
+    <section class="py-5 bg-primary overflow-hidden" id="about">
+      <div
+        class="container gap-4 d-flex justify-content-center align-items-center flex-column pt-5 mt-5 text-white text-center wow bounceInUp"
+      >
+        <h1 class="font-quicksand-700">About Us</h1>
+        <p class="font-body text-white w-50">
+          CourseLab is a website that provides various educational needs for all
+          groups. We have courses, learning materials, webinars, and much more
+          to support your academic needs.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light-blue py-5" id="team">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center pb-3">
+          <h2 class="font-quicksand-700">Our Team</h2>
+        </div>
+
+        <div class="d-grid gap-3">
+          <div class="col wow bounceInUp">
+            <div class="card h-100">
+              <div class="card-image">
+                <img
+                  src="../assets/images/vektor/Male-1.png"
+                  alt="Aji"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="card-body d-flex flex-column gap-3 justify-content-center align-items-start">
+                <div class="me">
+                  <h3 class="font-quicksand-600">Aji Nur Aji</h3>
+                  <p class="font-body">Programmer and Designer</p>
+                  <p>Hi 👋, i'm programmer and designer on this website.</p>
+                </div>
+                <p class="font-quicksand-500 email">ajinuraji@courselab.com</p>
+                <a href="#" class="btn btn-primary font-quicksand-600 w-100">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="col wow bounceInUp">
+            <div class="card h-100">
+              <div class="card-image">
+                <img
+                  src="../assets/images/vektor/Male-2.png"
+                  alt="Reza"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="card-body d-flex flex-column gap-3 justify-content-center align-items-start">
+                <div class="me">
+                  <h3 class="font-quicksand-600">Muhamad Reza P.</h3>
+                  <p class="font-body">Programmer</p>
+                  <p>Hi 👋, i'm programmer on this website.</p>
+                </div>
+                <p class="font-quicksand-500 email">muhmadreza@courselab.com</p>
+                <a href="#" class="btn btn-primary font-quicksand-600 w-100">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="col wow bounceInUp">
+            <div class="card h-100">
+              <div class="card-image">
+                <img
+                  src="../assets/images/vektor/Female.png"
+                  alt="Malika"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="card-body d-flex flex-column gap-3 justify-content-center align-items-start">
+                <div class="me">
+                  <h3 class="font-quicksand-600">Malika Shalsabila A.</h3>
+                  <p class="font-body">Designer</p>
+                  <p>Hi 👋, i'm designer on this website.</p>
+                </div>
+                <p class="font-quicksand-500 email">malikash@courselab.com</p>
+                <a href="#" class="btn btn-primary font-quicksand-600 w-100">Contact</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="../assets/images/Female.png" alt="John" style="width:100%">
-        <div class="container profile">
-          <h3>Malika Salshabila A.</h3>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>john@example.com</p>
-          <p><button class="button">Contact</button></p>
+    </section>
+
+    <footer id="footer" class="pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget subscribe no-box">
+              <h5 class="widget-title">
+                <img src="../assets/images/logos/logo-white.svg" alt="" />
+                <span></span>
+              </h5>
+              <p class="font-body">
+                CourseLab is your dedicated platform for transformative learning
+                experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Quick Links<span></span>
+              </h5>
+              <ul class="thumbnail-widget">
+                <li>
+                  <a href="./index.html" class="font-body text-decoration-none"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/about.html"
+                    class="font-body text-decoration-none"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/courses.html"
+                    class="font-body text-decoration-none"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/contact.html"
+                    class="font-body text-decoration-none"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Location<span></span>
+              </h5>
+              <p class="font-body">Cikeusik, Cidahu, Kuningan, West Java.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Contact Us<span></span>
+              </h5>
+
+              <p>
+                <a href="#" class="font-body text-decoration-none"
+                  >admin@courselab.com</a
+                >
+              </p>
+              <div
+                class="d-flex mt-2 justify-content-start align-items-center gap-3"
+              >
+                <a href="" class="icon-footer">
+                  <i data-feather="instagram"></i>
+                </a>
+                <a href="" class="icon-footer">
+                  <i data-feather="youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  
-  <!-- bootstrap js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <div class="container text-center copy">
+        <p class="font-body text-white py-4">
+          Copyright CourseLab. &copy; 2023. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
-  <!-- feather icon -->
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <!-- my js -->
-  <script src="../assets/js/index.js"></script>
-  <script>
-    const logo = document.getElementById("logo");
-    const navbar = document.getElementById("navbar");
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
-    const scrollHandle = () => {
-      const scrolY = window.scrollY;
+    <!-- feather icon -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-      if (scrolY > 0) {
-        logo.src = "../assets/images/logo.svg";
-        navbar.classList.add("active");
-      } else {
-        logo.src = "../assets/images/logo-white.svg";
-        navbar.classList.remove("active");
-      }
-    };
+    <!-- wow js -->
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
 
-    window.addEventListener("scroll", scrollHandle);
-  </script>
-</body>
+    <!-- my js -->
+    <script src="../assets/js/index.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      const logo = document.getElementById("logo");
+      const navbar = document.getElementById("navbar");
+
+      const scrollHandle = () => {
+        const scrolY = window.scrollY;
+
+        if (scrolY > 0) {
+          logo.src = "../assets/images/logos/logo.svg";
+          navbar.classList.add("active");
+        } else {
+          logo.src = "../assets/images/logos/logo-white.svg";
+          navbar.classList.remove("active");
+        }
+      };
+
+      window.addEventListener("scroll", scrollHandle);
+    </script>
+  </body>
 </html>

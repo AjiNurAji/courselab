@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Courselab.</title>
+    <title>Courselab. | Contact Us</title>
     <meta
       name="description"
       content="Innovate your learning experience with Courselab."
     />
+    <link rel="icon" href="../assets/images/logos/favicon.svg" />
 
     <!-- bootstrap css -->
     <link
@@ -15,12 +16,6 @@
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
-    />
-
-    <!-- swiperjs css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <!-- wow js -->
@@ -41,15 +36,13 @@
   <body>
     <!-- navbar section -->
     <nav
-      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4 wow bounceInDown"
+      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4"
       id="navbar"
-      data-wow-duration="0.05s"
-      data-wow-delay="0.6s"
     >
       <div class="container-fluid container">
         <a class="navbar-brand" href="#">
           <img
-            src="../assets/images/logo-white.svg"
+            src="../assets/images/logos/logo-white.svg"
             id="logo"
             alt="Courselab."
           />
@@ -63,10 +56,10 @@
               <a class="nav-link" href="./about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="./courses.html">Courses</a>
+              <a class="nav-link" href="./courses.html">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active`" href="./contact.html">Contact</a>
+              <a class="nav-link active" href="./contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -99,7 +92,7 @@
         >
           <div class="offcanvas-header">
             <div class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img src="../assets/images/logo.svg" />
+              <img src="../assets/images/logos/logo.svg" />
             </div>
             <button
               type="button"
@@ -113,13 +106,13 @@
               class="navbar-nav justify-content-end flex-grow-1 pe-3 body-text gap-3"
             >
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="./courses.html">Courses</a>
+                <a class="nav-link" href="./courses.html">Courses</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="./contact.html">Contact</a>
@@ -141,19 +134,18 @@
       </div>
     </nav>
 
-    <main
-      data-bs-spy="scroll"
-      data-bs-target=".navbar"
-      data-bs-root-margin="0px 0px -40%"
-      data-bs-smooth-scroll="true"
-    >
+    <main>
       <!-- contact Hero -->
-      <section id="contact" class="bg-primary py-5">
+      <section id="contact" class="bg-primary py-5 overflow-hidden">
         <div
           class="container d-flex align-items-center flex-column justify-content-center"
         >
-          <h1>Contact Us</h1>
-          <div class="container-contact my-5  wow bounceInUp">
+          <h1 class="font-quicksand-700">Contact Us</h1>
+          <p class="font-body text-center">
+            If you have any inquiries or require further information, please do
+            not hesitate to contact us.
+          </p>
+          <div class="container-contact my-5 wow bounceInUp">
             <form action="" class="d-flex flex-column gap-3">
               <div>
                 <label for="fname" class="mb-1">First Name</label>
@@ -162,7 +154,7 @@
                   class="input w-100 p-3 rounded font-body"
                   id="fname"
                   name="firstname"
-                  placeholder="Your name.."
+                  placeholder="Your first name.."
                 />
               </div>
               <div>
@@ -205,13 +197,13 @@
       </section>
     </main>
 
-    <footer id="footer" class="py-5 px-md-0 px-3">
+    <footer id="footer" class="pt-5 px-md-0 px-3">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="widget subscribe no-box">
               <h5 class="widget-title">
-                <img src="../assets/images/logo-white.svg" alt="" />
+                <img src="../assets/images/logos/logo-white.svg" alt="" />
                 <span></span>
               </h5>
               <p class="font-body">
@@ -228,7 +220,7 @@
               </h5>
               <ul class="thumbnail-widget">
                 <li>
-                  <a href="./index.html" class="font-body text-decoration-none"
+                  <a href="../index.html" class="font-body text-decoration-none"
                     >Home</a
                   >
                 </li>
@@ -290,12 +282,10 @@
         </div>
       </div>
 
-      <div class="py-4">
-        <div class="container text-center">
-          <p class="font-body text-white">
-            Copyright CourseLab. &copy; 2023. All rights reserved.
-          </p>
-        </div>
+      <div class="container text-center copy">
+        <p class="font-body text-white py-4">
+          Copyright CourseLab. &copy; 2023. All rights reserved.
+        </p>
       </div>
     </footer>
 
@@ -306,20 +296,16 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- particle js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
     <!-- feather icon -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-
-    <!-- swiperjs -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- wow js -->
     <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
 
     <!-- my js -->
-    <script src="../assets/js/index.js"></script>
+    <script>
+      feather.replace();
+    </script>
     <script>
       new WOW().init();
     </script>
@@ -331,33 +317,15 @@
         const scrolY = window.scrollY;
 
         if (scrolY > 0) {
-          logo.src = "../assets/images/logo.svg";
+          logo.src = "../assets/images/logos/logo.svg";
           navbar.classList.add("active");
         } else {
-          logo.src = "../assets/images/logo-white.svg";
+          logo.src = "../assets/images/logos/logo-white.svg";
           navbar.classList.remove("active");
         }
       };
 
       window.addEventListener("scroll", scrollHandle);
-    </script>
-    <script>
-      const swiper = new Swiper(".swiper", {
-        // Optional parameters
-        // loop: true,
-
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
     </script>
   </body>
 </html>

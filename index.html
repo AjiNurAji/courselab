@@ -9,6 +9,9 @@
       content="Innovate your learning experience with Courselab."
     />
 
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/logos/favicon.svg" />
+
     <!-- bootstrap css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -40,15 +43,13 @@
   <body>
     <!-- navbar section -->
     <nav
-      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4 wow bounceInDown"
+      class="navbar position-absolute top-0 w-100 navbar-expand-lg py-4"
       id="navbar"
-      data-wow-duration="0.5s"
-      data-wow-delay="0.6s"
     >
       <div class="container-fluid container">
         <a class="navbar-brand" href="#">
           <img
-            src="./assets/images/logo-white.svg"
+            src="./assets/images/logos/logo-white.svg"
             id="logo"
             alt="Courselab."
           />
@@ -98,7 +99,7 @@
         >
           <div class="offcanvas-header">
             <div class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img src="./assets/images/logo.svg" />
+              <img src="./assets/images/logos/logo.svg" />
             </div>
             <button
               type="button"
@@ -144,13 +145,17 @@
       <!-- Section Hero -->
       <section
         id="hero"
-        class="bg-primary vh-100 px-md-0 px-3 position-relative"
+        class="bg-primary vh-100 px-md-0 px-3 position-relative overflow-hidden"
       >
         <div id="particles-js"></div>
         <div
-          class="container z-2 position-relative d-flex align-items-end justify-content-center h-100"
+          class="container position-relative z-2 d-flex align-items-end justify-content-center h-100"
         >
-          <div class="left-hero d-flex flex-column gap-3 pb-5 mb-5 wow rollIn" data-wow-delay="0.1s" data-wow-duration="0.5s">
+          <div
+            class="left-hero d-flex justify-content-end flex-column gap-3 pb-5 mb-5 h-100 wow bounceInUp"
+            data-wow-delay="0.3s"
+            data-wow-duration="1s"
+          >
             <h1 class="font-quicksand-700 text-white">
               Innovate <span class="text-warning">Your</span>
               <span class="text-warning">Learning</span> Experience with
@@ -168,16 +173,18 @@
                 placeholder="Type your course"
               />
               <a
-                href="#"
+                href="./pages/courses.html"
                 class="icon-search bg-warning position-absolute me-2 end-0 p-2 rounded d-flex align-items-center justify-content-center"
               >
                 <i data-feather="search" class="text-primary"></i>
               </a>
             </div>
           </div>
-          <div class="right-hero d-flex justify-content-center align-items-end wow lightSpeedIn" data-wow-delay="0.5s"  data-wow-duration="0.5s">
+          <div
+            class="right-hero d-flex justify-content-center align-items-end h-100"
+          >
             <img
-              src="./assets/images/image-hero.png"
+              src="./assets/images/person/image-hero.png"
               alt="hero image"
               class="hero-image"
             />
@@ -186,7 +193,7 @@
       </section>
 
       <!-- Section proccess -->
-      <section class="bg-light-blue px-md-0 px-3 py-5" id="process">
+      <section class="bg-light-blue py-5 overflow-hidden" id="process">
         <div
           class="container d-flex flex-column gap-5 justify-content-center align-items-center"
         >
@@ -197,7 +204,7 @@
             <p class="font-body">Get benefits and experience with us</p>
           </div>
           <div class="row row-cols-1 row-cols-md-3 g-5 position-relative">
-            <div class="col wow rollIn center">
+            <div class="col wow bounceInRight center" data-wow-delay="0.0s">
               <div class="card h-100 text-start">
                 <div class="card-icon bg-primary position-relative">
                   <i data-feather="search"></i>
@@ -213,8 +220,12 @@
                 </div>
               </div>
             </div>
-            <img class="arrow1" src="./assets/images/arrow.svg" />
-            <div class="col wow pulse" data-wow-iteration="5" data-wow-duration="0.15s">
+            <img
+              class="arrow1 wow fadeInUp"
+              data-wow-delay="0.9s"
+              src="./assets/images/vektor/arrow1.svg"
+            />
+            <div class="col wow bounceInRight" data-wow-delay="0.4s">
               <div class="card h-100 text-start">
                 <div class="card-icon bg-primary position-relative">
                   <i data-feather="calendar"></i>
@@ -229,8 +240,12 @@
                 </div>
               </div>
             </div>
-            <img class="arrow2" src="./assets/images/arrow.svg" />
-            <div class="col wow bounceInRight center">
+            <img
+              class="arrow2 wow fadeInUp"
+              data-wow-delay="0.9s"
+              src="./assets/images/vektor/arrow2.svg"
+            />
+            <div class="col wow bounceInRight" data-wow-delay="0.8s">
               <div class="card h-100 text-start">
                 <div class="card-icon bg-primary position-relative">
                   <i data-feather="award"></i>
@@ -251,61 +266,67 @@
 
       <!-- Section popular corse -->
       <section
-        class="bg-primary position-relative overflow-hidden px-md-0 px-3"
+        class="bg-primary position-relative overflow-hidden"
         id="popular"
       >
         <div id="particle-course"></div>
         <div
-          class="container py-5 d-flex flex-column gap-5 justify-content-center align-items-start"
+          class="container py-5 d-flex flex-column gap-5 justify-content-center align-items-center"
         >
-          <div class="heading text-start w-100 py-5 d-flex justify-content-between align-items-center">
-            <div class="wow bounceInLeft"><h2 class="font-quicksand-700 text-white text-capitalize">
-              most popular courses
-            </h2>
-            <p class="font-body">
-              Online education platform is very easy way to learn anything from
-              anywhere. Now a day.
-            </p></div>
+          <div
+            class="heading text-start w-100 pb-3 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-center"
+          >
+            <div class="wow bounceInLeft">
+              <h2 class="font-quicksand-700 text-white text-capitalize">
+                most popular courses
+              </h2>
+              <p class="font-body">
+                Online education platform is very easy way to learn anything
+                from anywhere.
+              </p>
+            </div>
             <div class="wow bounceInRight">
-              <a href="./pages/courses.html" class="btn btn-warning text-capitalize font-quicksand-600">see all courses</a>
+              <a
+                href="./pages/courses.html"
+                class="btn btn-warning text-capitalize font-quicksand-600"
+                >see all courses</a
+              >
             </div>
           </div>
-          <div class="d-grid gap-3 w-100 pb-5">
+          <div class="row row-cols-1 row-cols-md-3 justify-content-center align-items-center w-100">
             <div class="col wow bounceInUp center" data-wow-delay="0.05s">
               <a href="./pages/courses.html" class="text-decoration-none">
                 <div class="card h-100">
                   <div class="card-image">
                     <img
-                      src="./assets/images/web-dev.webp"
+                      src="./assets/images/courses/js.webp"
                       class="card-img-top"
                       alt="..."
                     />
                   </div>
                   <div class="card-body">
-                    <h5 class="font-quicksand-700 text-capitalize">
-                      website development
-                    </h5>
-                    <div
-                      class="information d-flex gap-1 flex-column justify-content-center align-items-start"
-                    >
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="users"></i>
-                        </div>
-                        <p class="subject font-body">350+</p>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="book"></i>
-                        </div>
-                        <p class="subject font-body">3 Topic • 15 Material</p>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="star"></i>
-                        </div>
-                        <p class="subject font-body">4,6/5</p>
-                      </div>
+                    <div class="category mb-2 d-flex justify-content-center align-items-center">
+                      <p class="font-quicksand-600 text-capitalize text-primary">
+                        web development
+                      </p>
+                    </div>
+                    <div class="material">
+                      <h5 class="font-quicksand-700 text-capitalize">
+                        JavaScript
+                      </h5>
+                      <span class="font-quicksand-600 price text-primary"
+                        >Rp. 180.000</span
+                      >
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="icon d-flex align-items-center gap-2">
+                      <i data-feather="book"></i>
+                      <p class="subject font-body">5 Material</p>
+                    </div>
+                    <div class="icon d-flex align-items-center gap-2">
+                      <i data-feather="star"></i>
+                      <p class="subject font-body">5/5</p>
                     </div>
                   </div>
                 </div>
@@ -316,36 +337,34 @@
                 <div class="card h-100">
                   <div class="card-image">
                     <img
-                      src="./assets/images/ui-ux.webp"
+                      src="./assets/images/courses/figma.webp"
                       class="card-img-top"
                       alt="..."
                     />
                   </div>
                   <div class="card-body">
-                    <h5 class="font-quicksand-700 text-capitalize">
-                      UI/UX Design
-                    </h5>
-                    <div
-                      class="information d-flex gap-1 flex-column justify-content-center align-items-start"
-                    >
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="users"></i>
-                        </div>
-                        <p class="subject font-body">150</p>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="book"></i>
-                        </div>
-                        <p class="subject font-body">1 Topic • 5 Material</p>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="star"></i>
-                        </div>
-                        <p class="subject font-body">4,6/5</p>
-                      </div>
+                    <div class="category mb-2 d-flex justify-content-center align-items-center">
+                      <p class="font-quicksand-600 text-capitalize text-primary">
+                        UI/UX Design
+                      </p>
+                    </div>
+                    <div class="material">
+                      <h5 class="font-quicksand-700 text-capitalize">
+                        Figma
+                      </h5>
+                      <span class="font-quicksand-600 price text-primary"
+                        >Rp. 150.000</span
+                      >
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="icon d-flex align-items-center gap-2">
+                      <i data-feather="book"></i>
+                      <p class="subject font-body">3 Material</p>
+                    </div>
+                    <div class="icon d-flex align-items-center gap-2">
+                      <i data-feather="star"></i>
+                      <p class="subject font-body">4,7/5</p>
                     </div>
                   </div>
                 </div>
@@ -356,36 +375,34 @@
                 <div class="card h-100">
                   <div class="card-image">
                     <img
-                      src="./assets/images/english.webp"
+                      src="./assets/images/courses/english.webp"
                       class="card-img-top"
                       alt="..."
                     />
                   </div>
                   <div class="card-body">
-                    <h5 class="font-quicksand-700 text-capitalize">
-                      english language
-                    </h5>
-                    <div
-                      class="information d-flex gap-1 flex-column justify-content-center align-items-start"
-                    >
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="users"></i>
-                        </div>
-                        <p class="subject font-body">250</p>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="book"></i>
-                        </div>
-                        <p class="subject font-body">1 Topic • 5 Material</p>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="icon">
-                          <i data-feather="star"></i>
-                        </div>
-                        <p class="subject font-body">4,6/5</p>
-                      </div>
+                    <div class="category mb-2 d-flex justify-content-center align-items-center">
+                      <p class="font-quicksand-600 text-capitalize text-primary">
+                        Language
+                      </p>
+                    </div>
+                    <div class="material">
+                      <h5 class="font-quicksand-700 text-capitalize">
+                        English
+                      </h5>
+                      <span class="font-quicksand-600 price text-primary"
+                        >Rp. 100.000</span
+                      >
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="icon d-flex align-items-center gap-2">
+                      <i data-feather="book"></i>
+                      <p class="subject font-body">6 Material</p>
+                    </div>
+                    <div class="icon d-flex align-items-center gap-2">
+                      <i data-feather="star"></i>
+                      <p class="subject font-body">4,5/5</p>
                     </div>
                   </div>
                 </div>
@@ -396,7 +413,7 @@
       </section>
 
       <!-- testimonial -->
-      <section id="testimoni" class="py-5 bg-light-blue px-md-0 px-3">
+      <section id="testimoni" class="py-5 bg-light-blue overflow-hidden">
         <div
           class="container d-flex h-100 flex-column flex-xl-row-reverse align-items-center gap-5"
         >
@@ -418,15 +435,15 @@
                 class="swiper-slide d-flex align-items-center justify-content-center"
               >
                 <div class="card w-50">
-                  <img
-                    src="./assets/images/petik.svg"
-                    alt=".."
-                    class="bg-petik"
-                  />
                   <div class="card-profile" data-name="kelvin">
-                    <img src="./assets/images/kelvin.jpg" alt="kelvin" />
+                    <img src="./assets/images/person/kelvin.webp" alt="kelvin" />
                   </div>
                   <div class="card-body">
+                    <img
+                      src="./assets/images/vektor/petik.svg"
+                      alt=".."
+                      class="bg-petik"
+                    />
                     <p class="font-quicksand-700 py-5 text-center">
                       "Studying at CourseLab is fun. learn from the beginning,
                       over time it gradually becomes difficult and enjoyable.
@@ -439,15 +456,15 @@
                 class="swiper-slide d-flex align-items-center justify-content-center"
               >
                 <div class="card w-50">
-                  <img
-                    src="./assets/images/petik.svg"
-                    alt=".."
-                    class="bg-petik"
-                  />
                   <div class="card-profile" data-name="rahma">
-                    <img src="./assets/images/rahma.jpg" alt="rahma" />
+                    <img src="./assets/images/person/rahma.webp" alt="rahma" />
                   </div>
                   <div class="card-body">
+                    <img
+                      src="./assets/images/vektor/petik.svg"
+                      alt=".."
+                      class="bg-petik"
+                    />
                     <p class="font-quicksand-700 py-5 text-center">
                       "Courselab helps me in studying, the material is
                       understandable and very good."
@@ -459,15 +476,15 @@
                 class="swiper-slide d-flex align-items-center justify-content-center"
               >
                 <div class="card w-50">
-                  <img
-                    src="./assets/images/petik.svg"
-                    alt=".."
-                    class="bg-petik"
-                  />
                   <div class="card-profile" data-name="zahra">
-                    <img src="./assets/images/zahra.jpg" alt="zahra" />
+                    <img src="./assets/images/person/zahra.webp" alt="zahra" />
                   </div>
                   <div class="card-body">
+                    <img
+                      src="./assets/images/vektor/petik.svg"
+                      alt=".."
+                      class="bg-petik"
+                    />
                     <p class="font-quicksand-700 py-5 text-center">
                       "The class is very fun and really helps me in studying."
                     </p>
@@ -484,14 +501,15 @@
       <!-- cta -->
       <section
         id="cta"
-        class="py-5 bg-primary px-md-0 px-3 overflow-hidden position-relative"
+        class="py-5 bg-primary overflow-hidden position-relative"
       >
         <div
           id="particle-cta"
           class="position-absolute w-100 top-0 start-0 z-1"
         ></div>
         <div
-          data-wow-iteration="3" data-wow-duration="0.15s"
+          data-wow-iteration="3"
+          data-wow-duration="0.15s"
           class="container wow pulse position-relative z-3 text-white text-center d-flex flex-column gap-4 justify-content-center align-items-center"
         >
           <h2 class="font-quicksand-700">
@@ -512,13 +530,13 @@
       </section>
     </main>
 
-    <footer id="footer" class="py-5 px-md-0 px-3">
+    <footer id="footer" class="pt-5">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="widget subscribe no-box">
               <h5 class="widget-title">
-                <img src="./assets/images/logo-white.svg" alt="" />
+                <img src="./assets/images/logos/logo-white.svg" alt="" />
                 <span></span>
               </h5>
               <p class="font-body">
@@ -599,12 +617,10 @@
         </div>
       </div>
 
-      <div class="py-4">
-        <div class="container text-center">
-          <p class="font-body text-white">
-            Copyright CourseLab. &copy; 2023. All rights reserved.
-          </p>
-        </div>
+      <div class="container text-center copy">
+        <p class="font-body text-white py-4">
+          Copyright CourseLab. &copy; 2023. All rights reserved.
+        </p>
       </div>
     </footer>
 
@@ -640,10 +656,10 @@
         const scrolY = window.scrollY;
 
         if (scrolY > 0) {
-          logo.src = "./assets/images/logo.svg";
+          logo.src = "./assets/images/logos/logo.svg";
           navbar.classList.add("active");
         } else {
-          logo.src = "./assets/images/logo-white.svg";
+          logo.src = "./assets/images/logos/logo-white.svg";
           navbar.classList.remove("active");
         }
       };
