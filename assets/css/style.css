@@ -198,6 +198,8 @@ body {
   -ms-border-radius: var(--border-radius) !important;
   -o-border-radius: var(--border-radius) !important;
 }
+
+#navbar-course .btn-primary,
 .btn-primary,
 .navbar.active .navbar-toggler,
 .navbar.active .btn-primary {
@@ -215,6 +217,7 @@ body {
   box-shadow: 0 0 10px var(--color-light-blue) !important;
 }
 
+#navbar-course .btn-primary:hover,
 #signin .btn-primary:hover,
 #team .btn-primary:hover,
 .navbar.active .navbar-toggler:hover,
@@ -224,13 +227,16 @@ body {
   box-shadow: 0 0 10px var(--color-yellow);
 }
 
+#navbar-course .btn-primary svg,
 .navbar.active .navbar-toggler svg {
-  stroke: var(--color-white);
+  stroke: var(--color-white) !important;
 }
 
+#navbar-course .btn-primary:hover svg,
 .navbar.active .navbar-toggler:hover svg {
-  stroke: var(--color-blue);
+  stroke: var(--color-blue) !important;
 }
+
 
 /* body text */
 .body-text {
