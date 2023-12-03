@@ -410,23 +410,33 @@
                     <div class="the-material">
                       <p class="font-body py-2">
                         External scripts are practical when the same code is
-                        used in many different web pages.
-                        JavaScript files have the file extension
+                        used in many different web pages. JavaScript files have
+                        the file extension
                         <b class="text-black">.js</b>.
                       </p>
                       <p class="font-body">
-                        To use an external
-                        script, put the name of the script file in the
+                        To use an external script, put the name of the script
+                        file in the
                         <code>src</code> (source) attribute of a
                         <code>&lt;script&gt;</code> tag:
                       </p>
                       <p class="font-body py-2">Example</p>
                       <div class="code">
                         <code class="text-black code ps-0">
-                          &lt;<span class="text-brown">script</span> <span class="text-danger">src</span>=<span class="text-brown">"myScript.js"</span>&gt;&lt;<span class="text-brown">/script</span>&gt;
+                          &lt;<span class="text-brown">script</span>
+                          <span class="text-danger">src</span>=<span
+                            class="text-brown"
+                            >"myScript.js"</span
+                          >&gt;&lt;<span class="text-brown">/script</span>&gt;
                         </code>
                       </div>
-                      <p class="font-body py-2">You can place an external script reference in <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> as you like. The script will behave as if it was located exactly where the <code>&lt;script&gt;</code> tag is located.</p>
+                      <p class="font-body py-2">
+                        You can place an external script reference in
+                        <code>&lt;head&gt;</code> or
+                        <code>&lt;body&gt;</code> as you like. The script will
+                        behave as if it was located exactly where the
+                        <code>&lt;script&gt;</code> tag is located.
+                      </p>
                     </div>
                   </li>
                   <li class="mb-3">
@@ -436,21 +446,35 @@
                       </h3>
                     </div>
                     <div class="the-material">
-                      <p class="font-body">An external script can be referenced in 3 different ways:</p>
-                      <p class="font-body py-2">
-                        <ul>
-                          <li class="font-body">With a full URL (a full web address)</li>
-                          <li class="font-body">With a file path (like /js/)</li>
-                          <li class="font-body">Without any path</li>
-                        </ul>
+                      <p class="font-body">
+                        An external script can be referenced in 3 different
+                        ways:
                       </p>
+
+                      <ul class="mt-2">
+                        <li class="font-body">
+                          With a full URL (a full web address)
+                        </li>
+                        <li class="font-body">With a file path (like /js/)</li>
+                        <li class="font-body">Without any path</li>
+                      </ul>
                       <p class="font-body py-2">Example</p>
                       <div class="code">
                         <code class="text-black code ps-0">
-                          &lt;<span class="text-brown">script</span> <span class="text-danger">src</span>=<span class="text-brown">"myScript.js"</span>&gt;&lt;<span class="text-brown">/script</span>&gt;
+                          &lt;<span class="text-brown">script</span>
+                          <span class="text-danger">src</span>=<span
+                            class="text-brown"
+                            >"myScript.js"</span
+                          >&gt;&lt;<span class="text-brown">/script</span>&gt;
                         </code>
                       </div>
-                      <p class="font-body py-2">You can place an external script reference in <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> as you like. The script will behave as if it was located exactly where the <code>&lt;script&gt;</code> tag is located.</p>
+                      <p class="font-body py-2">
+                        You can place an external script reference in
+                        <code>&lt;head&gt;</code> or
+                        <code>&lt;body&gt;</code> as you like. The script will
+                        behave as if it was located exactly where the
+                        <code>&lt;script&gt;</code> tag is located.
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -478,18 +502,31 @@
               <div
                 class="accordion-body d-flex flex-column align-items-start gap-2"
               >
-              <h3 class="font-quicksand-600 text-black">
-                JavaScript Display Possibilities
-              </h3>
-              <p class="font-body">JavaScript can "display" data in different ways:</p>
-              <ul>
-                <li class="font-body">Writing into an HTML element, using <code>innerHTML</code>.</li>
-                <li class="font-body">Writing into the HTML output using <code>document.write()</code>.</li>
-                <li class="font-body">Writing into an alert box, using <code>window.alert()</code>.</li>
-                <li class="font-body">Writing into the browser console, using <code>console.log()</code>.</li>
-              </ul>
-
+                <h3 class="font-quicksand-600 text-black">
+                  JavaScript Display Possibilities
+                </h3>
+                <p class="font-body">
+                  JavaScript can "display" data in different ways:
+                </p>
                 <ul>
+                  <li class="font-body">
+                    Writing into an HTML element, using <code>innerHTML</code>.
+                  </li>
+                  <li class="font-body">
+                    Writing into the HTML output using
+                    <code>document.write()</code>.
+                  </li>
+                  <li class="font-body">
+                    Writing into an alert box, using
+                    <code>window.alert()</code>.
+                  </li>
+                  <li class="font-body">
+                    Writing into the browser console, using
+                    <code>console.log()</code>.
+                  </li>
+                </ul>
+
+                <ul class="mt-2">
                   <li class="mb-3">
                     <div class="heading">
                       <h3 class="font-quicksand-600 text-black">
@@ -498,12 +535,15 @@
                     </div>
                     <div class="the-material">
                       <p class="font-body mb-2">
-                        To access an HTML element, JavaScript can use the <code>document.getElementById(id)</code> method.
+                        To access an HTML element, JavaScript can use the
+                        <code>document.getElementById(id)</code> method.
                       </p>
                       <p class="font-body">
-                        The <code>id</code> attribute defines the HTML element. The <code>innerHTML</code> property defines the HTML content:
+                        The <code>id</code> attribute defines the HTML element.
+                        The <code>innerHTML</code> property defines the HTML
+                        content:
                       </p>
-                      
+
                       <p class="font-body my-2">Example</p>
                       <div class="code">
                         <code class="text-black code ps-0">
@@ -512,10 +552,10 @@
                           &lt;<span class="text-brown">html</span>&gt;<br />
                           &lt;<span class="text-brown">body</span
                           >&gt;<br /><br />
-                          &lt;<span class="text-brown">h1</span>&gt;My First Web Page&lt;<span class="text-brown"
-                            >/h1</span
-                          >&gt;<br />
-                          &lt;<span class="text-brown">p</span>&gt;My First Paragraph&lt;<span class="text-brown">/p</span
+                          &lt;<span class="text-brown">h1</span>&gt;My First Web
+                          Page&lt;<span class="text-brown">/h1</span>&gt;<br />
+                          &lt;<span class="text-brown">p</span>&gt;My First
+                          Paragraph&lt;<span class="text-brown">/p</span
                           >&gt;<br /><br />
 
                           &lt;<span class="text-brown">p</span>
@@ -526,12 +566,13 @@
                           >&gt;<br /><br />
 
                           &lt;<span class="text-brown">script</span>&gt;<br />
-                            document.getElementById(<span class="text-brown"
-                              >"demo"</span
-                            >).innerHTML = </span>
-                          <span class="text-danger">5</span> + <span class="text-danger">6</span>;
+                          document.getElementById(<span class="text-brown"
+                            >"demo"</span
+                          >).innerHTML = <span class="text-danger">5</span> +
+                          <span class="text-danger">6</span>;
                           <br />
-                          &lt;<span class="text-brown">/script</span>&gt;<br /><br />
+                          &lt;<span class="text-brown">/script</span
+                          >&gt;<br /><br />
 
                           &lt;<span class="text-brown">/body</span>&gt;<br />
                           &lt;<span class="text-brown">/html</span>&gt;<br />
@@ -547,7 +588,8 @@
                     </div>
                     <div class="the-material">
                       <p class="font-body">
-                        For testing purposes, it is convenient to use <code>document.write()</code>:
+                        For testing purposes, it is convenient to use
+                        <code>document.write()</code>:
                       </p>
                       <p class="font-body my-2">Example</p>
                       <div class="code">
@@ -557,14 +599,19 @@
                           &lt;<span class="text-brown">html</span>&gt;<br />
                           &lt;<span class="text-brown">body</span
                           >&gt;<br /><br />
-                          &lt;<span class="text-brown">h1</span>&gt;My First Web Page&lt;<span class="text-brown"
-                            >/h1</span
-                          >&gt;<br />
-                          &lt;<span class="text-brown">p</span>&gt;My First Paragraph&lt;<span class="text-brown">/p</span
+                          &lt;<span class="text-brown">h1</span>&gt;My First Web
+                          Page&lt;<span class="text-brown">/h1</span>&gt;<br />
+                          &lt;<span class="text-brown">p</span>&gt;My First
+                          Paragraph&lt;<span class="text-brown">/p</span
                           >&gt;<br /><br />
 
-                          &lt;<span class="text-brown">button</span> <span class="text-danger">onclick</span>=<span class="text-primary">"document.write(<span class="text-danger">5</span> + <span class="text-danger">6</span>)"</span>&gt;Try it
-                          &lt;<span class="text-brown">/button</span>&gt;<br /><br />
+                          &lt;<span class="text-brown">button</span>
+                          <span class="text-danger">onclick</span>=<span
+                            class="text-primary"
+                            >"document.write(<span class="text-danger">5</span>
+                            + <span class="text-danger">6</span>)"</span
+                          >&gt;Try it &lt;<span class="text-brown">/button</span
+                          >&gt;<br /><br />
 
                           &lt;<span class="text-brown">/body</span>&gt;<br />
                           &lt;<span class="text-brown">/html</span>&gt;<br />
@@ -572,7 +619,10 @@
                       </div>
 
                       <div class="note mt-3">
-                        <p class="font-body font-quicksand-600">The document.write() method should only be used for testing.</p>
+                        <p class="font-body font-quicksand-600">
+                          The document.write() method should only be used for
+                          testing.
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -594,22 +644,29 @@
                           &lt;<span class="text-brown">html</span>&gt;<br />
                           &lt;<span class="text-brown">body</span
                           >&gt;<br /><br />
-                          &lt;<span class="text-brown">h1</span>&gt;My First Web Page&lt;<span class="text-brown"
-                            >/h1</span
-                          >&gt;<br />
-                          &lt;<span class="text-brown">p</span>&gt;My First Paragraph&lt;<span class="text-brown">/p</span
+                          &lt;<span class="text-brown">h1</span>&gt;My First Web
+                          Page&lt;<span class="text-brown">/h1</span>&gt;<br />
+                          &lt;<span class="text-brown">p</span>&gt;My First
+                          Paragraph&lt;<span class="text-brown">/p</span
                           >&gt;<br /><br />
 
-                          &lt;<span class="text-brown">script</span>&gt;<br>
-                          window.alert(<span class="text-danger">5</span> + <span class="text-danger">6</span>); <br>
-                          &lt;<span class="text-brown">/script</span>&gt;<br /><br />
+                          &lt;<span class="text-brown">script</span>&gt;<br />
+                          window.alert(<span class="text-danger">5</span> +
+                          <span class="text-danger">6</span>); <br />
+                          &lt;<span class="text-brown">/script</span
+                          >&gt;<br /><br />
 
                           &lt;<span class="text-brown">/body</span>&gt;<br />
                           &lt;<span class="text-brown">/html</span>&gt;<br />
                         </code>
                       </div>
 
-                        <p class="font-body mt-3">You can skip the <code>window</code> keyword. In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object</p>
+                      <p class="font-body mt-3">
+                        You can skip the <code>window</code> keyword. In
+                        JavaScript, the window object is the global scope
+                        object. This means that variables, properties, and
+                        methods by default belong to the window object
+                      </p>
                     </div>
                   </li>
                   <li class="mb-3">
@@ -620,7 +677,9 @@
                     </div>
                     <div class="the-material">
                       <p class="font-body">
-                        For debugging purposes, you can call the <code>console.log()</code> method in the browser to display data.
+                        For debugging purposes, you can call the
+                        <code>console.log()</code> method in the browser to
+                        display data.
                       </p>
                       <p class="font-body my-2">Example</p>
                       <div class="code">
@@ -631,9 +690,11 @@
                           &lt;<span class="text-brown">body</span
                           >&gt;<br /><br />
 
-                          &lt;<span class="text-brown">script</span>&gt;<br>
-                          console.log(<span class="text-danger">5</span> + <span class="text-danger">6</span>); <br>
-                          &lt;<span class="text-brown">/script</span>&gt;<br /><br />
+                          &lt;<span class="text-brown">script</span>&gt;<br />
+                          console.log(<span class="text-danger">5</span> +
+                          <span class="text-danger">6</span>); <br />
+                          &lt;<span class="text-brown">/script</span
+                          >&gt;<br /><br />
 
                           &lt;<span class="text-brown">/body</span>&gt;<br />
                           &lt;<span class="text-brown">/html</span>&gt;<br />
@@ -650,7 +711,12 @@
               <button
                 disabled
                 class="w-100 font-quicksand-600"
-                style="font-size: 1rem; padding: 1rem 1.25rem; border-radius: 25px; background: transparent;"
+                style="
+                  font-size: 1rem;
+                  padding: 1rem 1.25rem;
+                  border-radius: 25px;
+                  background: transparent;
+                "
               >
                 Material Coming Soon
               </button>
@@ -666,7 +732,7 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="widget subscribe no-box">
               <h5 class="widget-title">
-                <img src="../../assets/images/logos/logo-white.svg" alt=""/>
+                <img src="../../assets/images/logos/logo-white.svg" alt="" />
                 <span></span>
               </h5>
               <p class="font-body">
@@ -683,7 +749,9 @@
               </h5>
               <ul class="thumbnail-widget">
                 <li>
-                  <a href="../../index.html" class="font-body text-decoration-none"
+                  <a
+                    href="../../index.html"
+                    class="font-body text-decoration-none"
                     >Home</a
                   >
                 </li>
