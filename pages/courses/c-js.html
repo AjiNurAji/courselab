@@ -29,38 +29,745 @@
     <link rel="stylesheet" href="../../assets/css/style.css" />
   </head>
   <body>
-
-    <nav class="navbar bg-body-tertiary" id="navbar-course">
+    <nav class="navbar bg-primary" id="navbar-course">
       <div class="container">
         <a class="navbar-brand" href="/">
-          <img src="../../assets/images/logos/logo.svg" alt="CourseLab">
+          <img src="../../assets/images/logos/logo-white.svg" alt="CourseLab" />
         </a>
-        <a href="/" class="btn btn-primary">
+
+        <a href="/" class="btn btn-warning">
           <i data-feather="arrow-left"></i>
         </a>
       </div>
     </nav>
 
-    <!-- bootstrap js -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <section class="py-5 bg-primary" id="material">
+      <div class="container position-relative h-100">
+        <div class="heading d-flex flex-column flex-md-row gap-4">
+          <div class="image">
+            <img src="../../assets/images/courses/js.webp" alt="JavaScript" />
+          </div>
+          <div class="title">
+            <h1 class="font-quicksand-700 text-white">JavaScript Tutorial</h1>
+            <p class="font-body text-light-blue mb-3">
+              JavaScript is the world's most popular programming language.
+              JavaScript is the programming language of the Web. JavaScript is
+              easy to learn. This tutorial will teach you JavaScript from basic
+              to advanced.
+            </p>
+            <p class="font-body text-light-blue">
+              In this tutorial, the learning speed is your choice. Everything is
+              up to you. If you are struggling, take a break, or re-read the
+              material. Always make sure you understand all the
+              "Try-it-Yourself" examples. The only way to become a clever
+              programmer is to: Practice. Practice. Practice. Code. Code. Code !
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- feather icon -->
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <section class="py-5 bg-light-blue">
+      <div class="container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                JavaScript Introduction #1
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <ul>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript Can Change HTML Content
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        One of many JavaScript HTML methods is
+                        <code>getElementById()</code>.
+                      </p>
+                      <p class="font-body">
+                        The example below "finds" an HTML element (with
+                        id="demo"), and changes the element content (innerHTML)
+                        to "Hello JavaScript":
+                      </p>
+                      <p class="font-body py-2">Example</p>
+                      <div class="code">
+                        <code class="text-black ps-2 code"
+                          >document.getElementById(<span class="text-brown"
+                            >"demo"</span
+                          >).innerHTML =
+                          <span class="text-brown">"Hello JavaScript"</span
+                          >;</code
+                        >
+                      </div>
+                      <p class="font-body py-2">
+                        JavaScript accepts both double and single quotes:
+                      </p>
+                      <div class="code">
+                        <code class="text-black ps-2 code"
+                          >document.getElementById(<span class="text-brown"
+                            >'demo'</span
+                          >).innerHTML =
+                          <span class="text-brown">'Hello JavaScript'</span
+                          >;</code
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript Can Change HTML Styles (CSS)
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body pb-2">
+                        Changing the style of an HTML element, is a variant of
+                        changing an HTML attribute:
+                      </p>
+                      <div class="code">
+                        <code class="text-black ps-2 code"
+                          >document.getElementById(<span class="text-brown"
+                            >"demo"</span
+                          >).style.fontSize =
+                          <span class="text-brown">"20px"</span>;</code
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript Can Hide HTML Elements
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body pb-2">
+                        Hiding HTML elements can be done by changing the
+                        <code>display</code> style:
+                      </p>
+                      <div class="code">
+                        <code class="text-black ps-2 code"
+                          >document.getElementById(<span class="text-brown"
+                            >"demo"</span
+                          >).style.display =
+                          <span class="text-brown">"none"</span>;</code
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript Can Show HTML Elements
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body pb-2">
+                        Showing hidden HTML elements can also be done by
+                        changing the <code>display</code> style:
+                      </p>
+                      <div class="code">
+                        <code class="text-black ps-2 code"
+                          >document.getElementById(<span class="text-brown"
+                            >"demo"</span
+                          >).style.display =
+                          <span class="text-brown">"block"</span>;</code
+                        >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="pt-3 container">
+                  <h4 class="font-quicksand-600 text-black">Did You Know?</h4>
+                  <p class="font-body">
+                    JavaScript and Java are completely different languages, both
+                    in concept and design. JavaScript was invented by Brendan
+                    Eich in 1995, and became an ECMA standard in 1997. ECMA-262
+                    is the official name of the standard. ECMAScript is the
+                    official name of the language.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                JavaScript Where To #2
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <ul>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        The <code>&lt;script&gt;</code> and
+                        <code>&lt;/script&gt;</code> Tag
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        In HTML, JavaScript code is inserted between
+                        <code>&lt;script&gt;</code> and
+                        <code>&lt;/script&gt;</code> tags.
+                      </p>
+                      <p class="font-body py-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">script</span
+                          >&gt;<br />document.getElementById(<span
+                            class="text-brown"
+                            >"demo"</span
+                          >).innerHTML =
+                          <span class="text-brown">"My First JavaScript"</span
+                          >;<br />
+                          &lt;<span class="text-brown">/script</span>&gt;<br />
+                        </code>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript Functions and Events
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        A JavaScript <code>function</code> is a block of
+                        JavaScript code, that can be executed when "called" for.
+                      </p>
+                      <p class="font-body">
+                        For example, a function can be called when an
+                        <b class="text-black">event</b> occurs, like when the
+                        user clicks a button.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript in <code>&lt;head&gt;</code>
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        In this example, a JavaScript function is placed in the
+                        <code>&lt;head&gt;</code> section of an HTML page.
+                      </p>
+                      <p class="font-body">
+                        The function is invoked (called) when a button is
+                        clicked:
+                      </p>
+                      <p class="font-body py-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">!DOCTYPE</span>
+                          <span class="text-danger">html</span>&gt;<br />
+                          &lt;<span class="text-brown">html</span>&gt;<br />
+                          &lt;<span class="text-brown">head</span>&gt;<br />
+                          &lt;<span class="text-brown">script</span>&gt;<br />
+                          <span class="text-primary">function</span>
+                          myFunction() { <br />
+                          document.getElementById(<span class="text-brown"
+                            >"demo"</span
+                          >).innerHTML =
+                          <span class="text-brown">"Paragraph changed."</span>;
+                          <br />
+                          }<br />
+                          &lt;<span class="text-brown">/script</span>&gt;<br />
+                          &lt;<span class="text-brown">/head</span>&gt;<br />
+                          &lt;<span class="text-brown">body</span
+                          >&gt;<br /><br />
+                          &lt;<span class="text-brown">h2</span>&gt;Demo
+                          JavaScript in Head&lt;<span class="text-brown"
+                            >/h2</span
+                          >&gt;<br /><br />
 
-    <!-- wow js -->
-    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+                          &lt;<span class="text-brown">p</span>
+                          <span class="text-danger">id</span>=<span
+                            class="text-primary"
+                            >"demo"</span
+                          >&gt;A Paragraph&lt;<span class="text-brown">/p</span
+                          >&gt;<br />
+                          &lt;<span class="text-brown">button</span>
+                          <span class="text-danger">type</span>=<span
+                            class="text-primary"
+                            >"button"</span
+                          >
+                          <span class="text-danger">onclick</span>=<span
+                            class="text-primary"
+                            >"myFunction()"</span
+                          >&gt;Try it&lt;<span class="text-brown">/button</span
+                          >&gt;<br /><br />
 
-    <!-- my js -->
-    <script src="./assets/js/index.js"></script>
-    <script>
-      feather.replace()
-    </script>
-    <script>
-      new WOW().init()
-    </script>
+                          &lt;<span class="text-brown">/body</span>&gt;<br />
+                          &lt;<span class="text-brown">/html</span>&gt;<br />
+                        </code>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript in <code>&lt;body&gt;</code>
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        In this example, a JavaScript function is placed in the
+                        <code>&lt;body&gt;</code> section of an HTML page.
+                      </p>
+                      <p class="font-body pb-2">
+                        The function is invoked (called) when a button is
+                        clicked:
+                      </p>
+                      <p class="font-body py-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">!DOCTYPE</span>
+                          <span class="text-danger">html</span>&gt;<br />
+                          &lt;<span class="text-brown">html</span>&gt;<br />
+                          &lt;<span class="text-brown">body</span
+                          >&gt;<br /><br />
+                          &lt;<span class="text-brown">h2</span>&gt;Demo
+                          JavaScript in Head&lt;<span class="text-brown"
+                            >/h2</span
+                          >&gt;<br /><br />
+
+                          &lt;<span class="text-brown">p</span>
+                          <span class="text-danger">id</span>=<span
+                            class="text-primary"
+                            >"demo"</span
+                          >&gt;A Paragraph&lt;<span class="text-brown">/p</span
+                          >&gt;<br />
+                          &lt;<span class="text-brown">button</span>
+                          <span class="text-danger">type</span>=<span
+                            class="text-primary"
+                            >"button"</span
+                          >
+                          <span class="text-danger">onclick</span>=<span
+                            class="text-primary"
+                            >"myFunction()"</span
+                          >&gt;Try it&lt;<span class="text-brown">/button</span
+                          >&gt;<br /><br />
+
+                          &lt;<span class="text-brown">script</span>&gt;<br />
+                          <span class="text-primary">function</span>
+                          myFunction() { <br />
+                          document.getElementById(<span class="text-brown"
+                            >"demo"</span
+                          >).innerHTML =
+                          <span class="text-brown">"Paragraph changed."</span>;
+                          <br />
+                          }<br />
+                          &lt;<span class="text-brown">/script</span>&gt;<br />
+                          &lt;<span class="text-brown">/body</span>&gt;<br />
+                          &lt;<span class="text-brown">/html</span>&gt;<br />
+                        </code>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript Eksternal
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body py-2">
+                        External scripts are practical when the same code is
+                        used in many different web pages.
+                        JavaScript files have the file extension
+                        <b class="text-black">.js</b>.
+                      </p>
+                      <p class="font-body">
+                        To use an external
+                        script, put the name of the script file in the
+                        <code>src</code> (source) attribute of a
+                        <code>&lt;script&gt;</code> tag:
+                      </p>
+                      <p class="font-body py-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">script</span> <span class="text-danger">src</span>=<span class="text-brown">"myScript.js"</span>&gt;&lt;<span class="text-brown">/script</span>&gt;
+                        </code>
+                      </div>
+                      <p class="font-body py-2">You can place an external script reference in <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> as you like. The script will behave as if it was located exactly where the <code>&lt;script&gt;</code> tag is located.</p>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        External References
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">An external script can be referenced in 3 different ways:</p>
+                      <p class="font-body py-2">
+                        <ul>
+                          <li class="font-body">With a full URL (a full web address)</li>
+                          <li class="font-body">With a file path (like /js/)</li>
+                          <li class="font-body">Without any path</li>
+                        </ul>
+                      </p>
+                      <p class="font-body py-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">script</span> <span class="text-danger">src</span>=<span class="text-brown">"myScript.js"</span>&gt;&lt;<span class="text-brown">/script</span>&gt;
+                        </code>
+                      </div>
+                      <p class="font-body py-2">You can place an external script reference in <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> as you like. The script will behave as if it was located exactly where the <code>&lt;script&gt;</code> tag is located.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                JavaScript Output #3
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+              <h3 class="font-quicksand-600 text-black">
+                JavaScript Display Possibilities
+              </h3>
+              <p class="font-body">JavaScript can "display" data in different ways:</p>
+              <ul>
+                <li class="font-body">Writing into an HTML element, using <code>innerHTML</code>.</li>
+                <li class="font-body">Writing into the HTML output using <code>document.write()</code>.</li>
+                <li class="font-body">Writing into an alert box, using <code>window.alert()</code>.</li>
+                <li class="font-body">Writing into the browser console, using <code>console.log()</code>.</li>
+              </ul>
+
+                <ul>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        Using innerHTML
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body mb-2">
+                        To access an HTML element, JavaScript can use the <code>document.getElementById(id)</code> method.
+                      </p>
+                      <p class="font-body">
+                        The <code>id</code> attribute defines the HTML element. The <code>innerHTML</code> property defines the HTML content:
+                      </p>
+                      
+                      <p class="font-body my-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">!DOCTYPE</span>
+                          <span class="text-danger">html</span>&gt;<br />
+                          &lt;<span class="text-brown">html</span>&gt;<br />
+                          &lt;<span class="text-brown">body</span
+                          >&gt;<br /><br />
+                          &lt;<span class="text-brown">h1</span>&gt;My First Web Page&lt;<span class="text-brown"
+                            >/h1</span
+                          >&gt;<br />
+                          &lt;<span class="text-brown">p</span>&gt;My First Paragraph&lt;<span class="text-brown">/p</span
+                          >&gt;<br /><br />
+
+                          &lt;<span class="text-brown">p</span>
+                          <span class="text-danger">id</span>=<span
+                            class="text-primary"
+                            >"demo"</span
+                          >&gt;&lt;<span class="text-brown">/p</span
+                          >&gt;<br /><br />
+
+                          &lt;<span class="text-brown">script</span>&gt;<br />
+                            document.getElementById(<span class="text-brown"
+                              >"demo"</span
+                            >).innerHTML = </span>
+                          <span class="text-danger">5</span> + <span class="text-danger">6</span>;
+                          <br />
+                          &lt;<span class="text-brown">/script</span>&gt;<br /><br />
+
+                          &lt;<span class="text-brown">/body</span>&gt;<br />
+                          &lt;<span class="text-brown">/html</span>&gt;<br />
+                        </code>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        Using document.write()
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        For testing purposes, it is convenient to use <code>document.write()</code>:
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">!DOCTYPE</span>
+                          <span class="text-danger">html</span>&gt;<br />
+                          &lt;<span class="text-brown">html</span>&gt;<br />
+                          &lt;<span class="text-brown">body</span
+                          >&gt;<br /><br />
+                          &lt;<span class="text-brown">h1</span>&gt;My First Web Page&lt;<span class="text-brown"
+                            >/h1</span
+                          >&gt;<br />
+                          &lt;<span class="text-brown">p</span>&gt;My First Paragraph&lt;<span class="text-brown">/p</span
+                          >&gt;<br /><br />
+
+                          &lt;<span class="text-brown">button</span> <span class="text-danger">onclick</span>=<span class="text-primary">"document.write(<span class="text-danger">5</span> + <span class="text-danger">6</span>)"</span>&gt;Try it
+                          &lt;<span class="text-brown">/button</span>&gt;<br /><br />
+
+                          &lt;<span class="text-brown">/body</span>&gt;<br />
+                          &lt;<span class="text-brown">/html</span>&gt;<br />
+                        </code>
+                      </div>
+
+                      <div class="note mt-3">
+                        <p class="font-body font-quicksand-600">The document.write() method should only be used for testing.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        Using window.alert()
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        You can use an alert box to display data:
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">!DOCTYPE</span>
+                          <span class="text-danger">html</span>&gt;<br />
+                          &lt;<span class="text-brown">html</span>&gt;<br />
+                          &lt;<span class="text-brown">body</span
+                          >&gt;<br /><br />
+                          &lt;<span class="text-brown">h1</span>&gt;My First Web Page&lt;<span class="text-brown"
+                            >/h1</span
+                          >&gt;<br />
+                          &lt;<span class="text-brown">p</span>&gt;My First Paragraph&lt;<span class="text-brown">/p</span
+                          >&gt;<br /><br />
+
+                          &lt;<span class="text-brown">script</span>&gt;<br>
+                          window.alert(<span class="text-danger">5</span> + <span class="text-danger">6</span>); <br>
+                          &lt;<span class="text-brown">/script</span>&gt;<br /><br />
+
+                          &lt;<span class="text-brown">/body</span>&gt;<br />
+                          &lt;<span class="text-brown">/html</span>&gt;<br />
+                        </code>
+                      </div>
+
+                        <p class="font-body mt-3">You can skip the <code>window</code> keyword. In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object</p>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        Using console.log()
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        For debugging purposes, you can call the <code>console.log()</code> method in the browser to display data.
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">!DOCTYPE</span>
+                          <span class="text-danger">html</span>&gt;<br />
+                          &lt;<span class="text-brown">html</span>&gt;<br />
+                          &lt;<span class="text-brown">body</span
+                          >&gt;<br /><br />
+
+                          &lt;<span class="text-brown">script</span>&gt;<br>
+                          console.log(<span class="text-danger">5</span> + <span class="text-danger">6</span>); <br>
+                          &lt;<span class="text-brown">/script</span>&gt;<br /><br />
+
+                          &lt;<span class="text-brown">/body</span>&gt;<br />
+                          &lt;<span class="text-brown">/html</span>&gt;<br />
+                        </code>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                disabled
+                class="w-100 font-quicksand-600"
+                style="font-size: 1rem; padding: 1rem 1.25rem; border-radius: 25px; background: transparent;"
+              >
+                Material Coming Soon
+              </button>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="pt-5 px-md-0 px-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget subscribe no-box">
+              <h5 class="widget-title">
+                <img src="../../assets/images/logos/logo-white.svg" alt=""/>
+                <span></span>
+              </h5>
+              <p class="font-body">
+                CourseLab is your dedicated platform for transformative learning
+                experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Quick Links<span></span>
+              </h5>
+              <ul class="thumbnail-widget">
+                <li>
+                  <a href="../../index.html" class="font-body text-decoration-none"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../about.html" class="font-body text-decoration-none"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../courses.html"
+                    class="font-body text-decoration-none"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../contact.html"
+                    class="font-body text-decoration-none"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Location<span></span>
+              </h5>
+              <p class="font-body">Cikeusik, Cidahu, Kuningan, West Java.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Contact Us<span></span>
+              </h5>
+
+              <p>
+                <a href="#" class="font-body text-decoration-none"
+                  >admin@courselab.com</a
+                >
+              </p>
+              <div
+                class="d-flex mt-2 justify-content-start align-items-center gap-3"
+              >
+                <a href="" class="icon-footer">
+                  <i data-feather="instagram"></i>
+                </a>
+                <a href="" class="icon-footer">
+                  <i data-feather="youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center copy">
+        <p class="font-body text-white py-4">
+          Copyright CourseLab. &copy; 2023. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
+  <!-- bootstrap js -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- feather icon -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- wow js -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+
+  <!-- my js -->
+  <script src="../../assets/js/index.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </html>

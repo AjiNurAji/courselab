@@ -5,7 +5,8 @@
   --color-black: #232323;
   --color-gray: #728196;
   --color-yellow: #fed53a;
-  --color-red: #C0012D;
+  --color-red: #c0012d;
+  --color-brown: #a52a2a;
   --border-radius: 25px;
 }
 
@@ -69,6 +70,18 @@ body {
   color: var(--color-red) !important;
 }
 
+.text-light-blue {
+  color: rgba(236, 240, 244, 0.5) !important;
+}
+
+.text-brown {
+  color: var(--color-brown) !important;
+}
+
+.text-gray {
+  color: var(--color-gray) !important;
+}
+
 /* Navbar edited */
 .navbar {
   z-index: 9999;
@@ -77,7 +90,7 @@ body {
 .navbar.active {
   position: fixed !important;
   background: var(--color-white);
-  padding: .5rem 0 !important;
+  padding: 0.5rem 0 !important;
   box-shadow: 0 0 5px var(--color-black);
 }
 
@@ -128,10 +141,11 @@ body {
   width: 100%;
 }
 
-
 .offcanvas .nav-link:hover::before,
 .offcanvas .nav-link.active:hover::before,
-.nav-link:hover::before {
+.nav-link:hover::before,
+.navbar.active .nav-link.active:hover::before,
+.navbar.active .nav-link:hover::before {
   background: var(--color-yellow) !important;
 }
 
@@ -199,7 +213,6 @@ body {
   -o-border-radius: var(--border-radius) !important;
 }
 
-#navbar-course .btn-primary,
 .btn-primary,
 .navbar.active .navbar-toggler,
 .navbar.active .btn-primary {
@@ -217,7 +230,6 @@ body {
   box-shadow: 0 0 10px var(--color-light-blue) !important;
 }
 
-#navbar-course .btn-primary:hover,
 #signin .btn-primary:hover,
 #team .btn-primary:hover,
 .navbar.active .navbar-toggler:hover,
@@ -227,16 +239,13 @@ body {
   box-shadow: 0 0 10px var(--color-yellow);
 }
 
-#navbar-course .btn-primary svg,
 .navbar.active .navbar-toggler svg {
   stroke: var(--color-white) !important;
 }
 
-#navbar-course .btn-primary:hover svg,
 .navbar.active .navbar-toggler:hover svg {
   stroke: var(--color-blue) !important;
 }
-
 
 /* body text */
 .body-text {
@@ -491,6 +500,7 @@ body {
   font-size: 12px !important;
 }
 
+.note,
 #courses .card .category,
 #popular .card .category {
   background: #fed53a40;
@@ -502,6 +512,23 @@ body {
   padding: 5px 10px;
   font-size: 10px !important;
   width: fit-content;
+}
+
+.code,
+code {
+  width: fit-content;
+  background: #eaeff3;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  padding: 2px 5px;
+  overflow: hidden;
+}
+
+.code {
+  padding: 5px 15px;
 }
 
 /* testimoni */
@@ -657,6 +684,10 @@ footer a:hover {
 .widget-title {
   margin-bottom: 20px;
 }
+
+.widget-title img {
+  width: 100%;
+}
 .widget-title span {
   background: var(--color-yellow) none repeat scroll 0 0;
   display: block;
@@ -710,10 +741,10 @@ footer a:hover {
 
 .divider:after,
 .divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
 }
 
 .box {
@@ -724,12 +755,40 @@ background: #eee;
   -o-border-radius: var(--border-radius);
 }
 
+#material .heading .image {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  flex: 0 0 35%;
+}
+
+#material .heading .image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#material .heading .title {
+  width: 100%;
+  flex: 0 0 65%;
+}
+
+.accordion .accordion-item,
+.accordion .accordion-item .accordion-button {
+  border-radius: var(--border-radius) !important;
+  -webkit-border-radius: var(--border-radius) !important;
+  -moz-border-radius: var(--border-radius) !important;
+  -ms-border-radius: var(--border-radius) !important;
+  -o-border-radius: var(--border-radius) !important;
+}
+
 @media (max-width: 992px) {
   #about p {
     width: 100% !important;
   }
 
-  #hero, #popular .container {
+  #hero,
+  #popular .container {
     height: auto !important;
   }
 
@@ -778,6 +837,10 @@ background: #eee;
     font-size: 15px;
   }
 
+  .widget-title img {
+    width: auto;
+  }
+
   .arrow1,
   .arrow2 {
     display: none;
@@ -799,7 +862,7 @@ background: #eee;
     width: 100% !important;
   }
 
-  #popular .row>* {
+  #popular .row > * {
     width: auto;
   }
 
