@@ -35,11 +35,27 @@
           <img src="../../assets/images/logos/logo-white.svg" alt="CourseLab" />
         </a>
 
-        <a href="/" class="btn btn-warning">
+        <a href="../courses.html" class="btn btn-warning">
           <i data-feather="arrow-left"></i>
         </a>
       </div>
     </nav>
+
+    <section id="preload" class="vh-100 w-100 position-fixed active">
+      <div
+        class="h-100 w-100 bg-light-blue d-flex flex-column justify-content-center align-items-center"
+      >
+        <img src="../../assets/images/logos/favicon.svg" />
+        <span class="loader"> </span>
+      </div>
+    </section>
+
+    <button
+      onclick="toTop()"
+      class="back-to-top p-3 rounded-pill bg-primary position-fixed"
+    >
+      <i data-feather="arrow-up"></i>
+    </button>
 
     <section class="py-5 bg-primary" id="material">
       <div class="container position-relative h-100">
@@ -546,7 +562,7 @@
 
                       <p class="font-body my-2">Example</p>
                       <div class="code">
-                        <code class="text-black code ps-0">
+                        <code class="text-black ps-0">
                           &lt;<span class="text-brown">!DOCTYPE</span>
                           <span class="text-danger">html</span>&gt;<br />
                           &lt;<span class="text-brown">html</span>&gt;<br />
@@ -593,7 +609,7 @@
                       </p>
                       <p class="font-body my-2">Example</p>
                       <div class="code">
-                        <code class="text-black code ps-0">
+                        <code class="text-black ps-0">
                           &lt;<span class="text-brown">!DOCTYPE</span>
                           <span class="text-danger">html</span>&gt;<br />
                           &lt;<span class="text-brown">html</span>&gt;<br />
@@ -638,7 +654,7 @@
                       </p>
                       <p class="font-body my-2">Example</p>
                       <div class="code">
-                        <code class="text-black code ps-0">
+                        <code class="text-black ps-0">
                           &lt;<span class="text-brown">!DOCTYPE</span>
                           <span class="text-danger">html</span>&gt;<br />
                           &lt;<span class="text-brown">html</span>&gt;<br />
@@ -683,7 +699,7 @@
                       </p>
                       <p class="font-body my-2">Example</p>
                       <div class="code">
-                        <code class="text-black code ps-0">
+                        <code class="text-black ps-0">
                           &lt;<span class="text-brown">!DOCTYPE</span>
                           <span class="text-danger">html</span>&gt;<br />
                           &lt;<span class="text-brown">html</span>&gt;<br />
@@ -699,6 +715,245 @@
                           &lt;<span class="text-brown">/body</span>&gt;<br />
                           &lt;<span class="text-brown">/html</span>&gt;<br />
                         </code>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+                JavaScript Statements #4
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <h3 class="font-quicksand-600 text-black">
+                  JavaScript Programs
+                </h3>
+                <p class="font-body my-2">
+                  A <b class="text-black">computer program</b> is a list of
+                  "instructions" to be "executed" by a computer. In a
+                  programming language, these programming instructions are
+                  called <b class="text-black">statements</b>. A
+                  <b class="text-black">JavaScript program</b> is a list of
+                  programming <b class="text-black">statements</b>.
+                </p>
+
+                <ul>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript Statements
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        JavaScript statements are composed of:
+                      </p>
+
+                      <p class="font-body">
+                        Values, Operators, Expressions, Keywords, and Comments.
+                      </p>
+
+                      <p class="font-body">
+                        This statement tells the browser to write "Hello Dolly."
+                        inside an HTML element with id="demo":
+                      </p>
+
+                      <p class="font-body my-2">Example</p>
+                      <div class="code">
+                        <code class="text-black ps-0">
+                          &lt;<span class="text-brown">script</span>&gt;<br />
+                          document.getElementById(<span class="text-brown"
+                            >"demo"</span
+                          >).innerHTML =
+                          <span class="text-brown">"Hello Dolly."</span>;
+                          <br />
+                          &lt;<span class="text-brown">/script</span>&gt;
+                        </code>
+                      </div>
+
+                      <p class="font-body mt-3 mb-2">
+                        Most JavaScript programs contain many JavaScript
+                        statements.
+                      </p>
+
+                      <p class="font-body">
+                        The statements are executed, one by one, in the same
+                        order as they are written.
+                      </p>
+
+                      <div class="note mt-2">
+                        <p class="font-body">
+                          JavaScript programs (and JavaScript statements) are
+                          often called JavaScript code.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        Semicolons ;
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        Semicolons separate JavaScript statements. Add a
+                        semicolon at the end of each executable statement:
+                      </p>
+
+                      <p class="font-body my-2">Example</p>
+                      <div class="code">
+                        <code class="text-black ps-0">
+                          <span class="text-primary">let</span> a, b, c; &nbsp;
+                          <span class="text-gray">// Declarate 3 variable</span>
+                          <br />
+                          a = <span class="text-danger">4</span>; &nbsp; &nbsp;
+                          &nbsp; &nbsp;
+                          <span class="text-gray"
+                            >// Assign the value 4 to a</span
+                          >
+                          <br />
+                          b = <span class="text-danger">2</span>; &nbsp; &nbsp;
+                          &nbsp; &nbsp;
+                          <span class="text-gray"
+                            >// Assign the value 2 to b</span
+                          >
+                          <br />
+                          c = a + b; &nbsp;
+                          <span class="text-gray"
+                            >// Assign the sum of a and b to c</span
+                          >
+                        </code>
+                      </div>
+
+                      <p class="font-body mt-3 mb-2">
+                        When separated by semicolons, multiple statements on one
+                        line are allowed:
+                      </p>
+
+                      <div class="code">
+                        <code class="text-black ps-0">
+                          a = <span class="text-danger">4</span>; &nbsp; b =
+                          <span class="text-danger">2</span>; &nbsp; c = a + b;
+                        </code>
+                      </div>
+
+                      <div class="note mt-2">
+                        <p class="font-body">
+                          On the web, you might see examples without semicolons.
+                          Ending statements with semicolon is not required, but
+                          highly recommended.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        JavaScript Keywords
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        JavaScript statements often start with a keyword to
+                        identify the JavaScript action to be performed.
+                      </p>
+                      <p class="font-body">
+                        Here is a list of some of the keywords you will learn
+                        about in this tutorial:
+                      </p>
+
+                      <table class="table table-striped mt-3 bg-light-blue">
+                        <thead>
+                          <tr>
+                            <th>Keyword</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="font-body text-gray">var</td>
+                            <td class="font-body text-gray">
+                              Declares a variable
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-body text-gray">let</td>
+                            <td class="font-body text-gray">
+                              Declares a block variable
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-body text-gray">const</td>
+                            <td class="font-body text-gray">
+                              Declares a block constant
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-body text-gray">if</td>
+                            <td class="font-body text-gray">
+                              Marks a block of statements to be executed on a
+                              condition
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-body text-gray">switch</td>
+                            <td class="font-body text-gray">
+                              Marks a block of statements to be executed in
+                              different cases
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-body text-gray">for</td>
+                            <td class="font-body text-gray">
+                              Marks a block of statements to be executed in a
+                              loop
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-body text-gray">function</td>
+                            <td class="font-body text-gray">
+                              Declares a function
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-body text-gray">return</td>
+                            <td class="font-body text-gray">
+                              Exits a function
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-body text-gray">try</td>
+                            <td class="font-body text-gray">
+                              Implements error handling to a block of statements
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="note mt-2">
+                        <p class="font-body">
+                          JavaScript keywords are reserved words. Reserved words
+                          cannot be used as names for variables.
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -834,7 +1089,25 @@
   <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
 
   <!-- my js -->
-  <script src="../../assets/js/index.js"></script>
+  <script src="../../assets/js/preload.js"></script>
+  <script>
+    function toTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script>
+    feather.replace();
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        document.querySelector(".back-to-top").classList.add("active");
+      } else {
+        document.querySelector(".back-to-top").classList.remove("active");
+      }
+    });
+  </script>
   <script>
     new WOW().init();
   </script>

@@ -35,6 +35,15 @@
     <link rel="stylesheet" href="../assets/css/contact-style.css" />
   </head>
   <body>
+    <section id="preload" class="vh-100 w-100 position-fixed active">
+      <div
+        class="h-100 w-100 bg-light-blue d-flex flex-column justify-content-center align-items-center"
+      >
+        <img src="../assets/images/logos/favicon.svg" />
+        <span class="loader"> </span>
+      </div>
+    </section>
+
     <section
       class="py-5 bg-primary vh-100 overflow-hidden position-relative"
       id="signup"
@@ -46,7 +55,7 @@
       <div
         class="container d-flex h-100 justify-content-center align-items-center z-2 position-relative"
       >
-        <div class="box bg-light-blue p-3 wow bounceInUp">
+        <div class="box bg-light-blue p-3 wow bounceInUp" data-wow-delay="2s">
           <div
             class="d-flex flex-column justify-content-center align-items-center px-3 gap-2 mb-3"
           >
@@ -61,11 +70,11 @@
               Welcome to CourseLab. Lest's sign up below!
             </p>
           </div>
-          <form action="" class="d-flex flex-column gap-3">
+          <form class="d-flex flex-column gap-3" method="post">
             <div
-              class="d-flex justify-content-between align-items-center gap-2"
+              class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
             >
-              <div>
+              <div class="w-100">
                 <label for="fname" class="mb-1">First Name</label>
                 <input
                   type="text"
@@ -75,7 +84,7 @@
                   placeholder="Your fist name.."
                 />
               </div>
-              <div>
+              <div class="w-100">
                 <label for="lastname" class="mb-1">Last Name</label>
                 <input
                   type="text"
@@ -95,6 +104,21 @@
                 name="email"
                 placeholder="Your email.."
               />
+            </div>
+            <div>
+              <label for="couese" class="mb-1">Courses</label>
+              <select
+                name="courses"
+                id="course"
+                class="input py-3 rounded font-body w-100"
+              >
+                <option disabled selected>Pilih Course</option>
+                <option value="">JavaScript</option>
+                <option value="">HTML5</option>
+                <option value="">CSS3</option>
+                <option value="">Figma</option>
+                <option value="">English</option>
+              </select>
             </div>
             <div>
               <label for="password" class="mb-1">Password</label>
@@ -120,7 +144,8 @@
             <div>
               <button
                 class="btn btn-primary font-quicksand-600 w-100"
-                type="submit"
+                type="button"
+                onclick="show()"
               >
                 Sign Up
               </button>
@@ -137,90 +162,37 @@
         </div>
       </div>
     </section>
-
   </body>
-    <!-- bootstrap js -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+  <!-- sweetalert js -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <!-- particle js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- bootstrap js -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
 
-    <!-- feather icon -->
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <!-- feather icon -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-    <!-- wow js -->
-    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+  <!-- wow js -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
 
-    <!-- my js -->
-    <script src="../assets/js/index.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-    <script>
-      particlesJS("particle-signin", {
-        particles: {
-          number: { value: 6, density: { enable: true, value_area: 800 } },
-          color: { value: "#eaeff3" },
-          shape: {
-            type: "polygon",
-            stroke: { width: 0, color: "#000000" },
-            polygon: { nb_sides: 6 },
-            image: { src: "img/github.svg", width: 100, height: 100 },
-          },
-          opacity: {
-            value: 0.3,
-            random: true,
-            anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
-          },
-          size: {
-            value: 160,
-            random: false,
-            anim: { enable: true, speed: 10, size_min: 40, sync: false },
-          },
-          line_linked: {
-            enable: false,
-            distance: 200,
-            color: "#ffffff",
-            opacity: 1,
-            width: 2,
-          },
-          move: {
-            enable: true,
-            speed: 8,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: { enable: false, rotateX: 600, rotateY: 1200 },
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: false, mode: "grab" },
-            onclick: { enable: false, mode: "push" },
-            resize: true,
-          },
-          modes: {
-            grab: { distance: 400, line_linked: { opacity: 1 } },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: { distance: 200, duration: 0.4 },
-            push: { particles_nb: 4 },
-            remove: { particles_nb: 2 },
-          },
-        },
-        retina_detect: true,
+  <!-- my js -->
+  <script src="../assets/js/preload.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script>
+    function show() {
+      return swal({
+        title: "Successfully!",
+        text: "You are new student!",
+        icon: "success",
+        button: false,
+        timer: 3000,
       });
-    </script>
+    }
+  </script>
 </html>

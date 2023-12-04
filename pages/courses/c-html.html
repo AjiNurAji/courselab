@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseLab | HTML5</title>
+    <link rel="icon" href="../../assets/images/logos/favicon.svg" />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- wow js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="../../assets/css/font.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-primary" id="navbar-course">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="../../assets/images/logos/logo-white.svg" alt="CourseLab" />
+        </a>
+
+        <a href="../courses.html" class="btn btn-warning">
+          <i data-feather="arrow-left"></i>
+        </a>
+      </div>
+    </nav>
+
+    <section id="preload" class="vh-100 w-100 position-fixed active">
+      <div
+        class="h-100 w-100 bg-light-blue d-flex flex-column justify-content-center align-items-center"
+      >
+        <img src="../../assets/images/logos/favicon.svg" />
+        <span class="loader"> </span>
+      </div>
+    </section>
+
+    <button
+      onclick="toTop()"
+      class="back-to-top p-3 rounded-pill bg-primary position-fixed"
+    >
+      <i data-feather="arrow-up"></i>
+    </button>
+
+    <section class="py-5 bg-primary" id="material">
+      <div class="container position-relative h-100">
+        <div class="heading d-flex flex-column flex-md-row gap-4">
+          <div class="image">
+            <img src="../../assets/images/courses/html.webp" alt="JavaScript" />
+          </div>
+          <div class="title">
+            <h1 class="font-quicksand-700 text-white">HTML Tutorial</h1>
+            <p class="font-body text-light-blue mb-3">
+              HTML is the standard markup language for Web pages. With HTML you
+              can create your own Website. HTML is easy to learn - You will
+              enjoy it!
+            </p>
+            <p class="font-body text-light-blue">
+              In this tutorial, the learning speed is your choice. Everything is
+              up to you. If you are struggling, take a break, or re-read the
+              material. Always make sure you understand all the
+              "Try-it-Yourself" examples. The only way to become a clever
+              programmer is to: Practice. Practice. Practice. Code. Code. Code !
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light-blue">
+      <div class="container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                HTML Introduction #1
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <ul>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        What is HTML?
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <ul>
+                        <li>
+                          <p class="font-body">
+                            HTML stands for Hyper Text Markup Language
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            HTML is the standard markup language for creating
+                            Web pages
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            HTML describes the structure of a Web page
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            HTML consists of a series of elements
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            HTML elements tell the browser how to display the
+                            content
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            HTML elements label pieces of content such as "this
+                            is a heading", "this is a paragraph", "this is a
+                            link", etc.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        A Simple HTML Document
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body py-2">Example</p>
+                      <div class="code">
+                        <code class="text-black ps-0">
+                          &lt;<span class="text-brown">!DOCTYPE</span>
+                          <span class="text-danger">html</span>&gt;<br />
+                          &lt;<span class="text-brown">html</span>&gt;<br />
+                          &lt;<span class="text-brown">head</span>&gt;<br />
+                          &lt;<span class="text-brown">title</span>&gt;Page
+                          Title&lt;<span class="text-brown">/title</span
+                          >&gt;<br />
+                          &lt;<span class="text-brown">/head</span>&gt;<br />
+                          &lt;<span class="text-brown">body</span
+                          >&gt;<br /><br />
+                          &lt;<span class="text-brown">h1</span>&gt;My First Web
+                          Page&lt;<span class="text-brown">/h1</span>&gt;<br />
+                          &lt;<span class="text-brown">p</span>&gt;My First
+                          Paragraph&lt;<span class="text-brown">/p</span
+                          >&gt;<br /><br />
+                          &lt;<span class="text-brown">/body</span>&gt;<br />
+                          &lt;<span class="text-brown">/html</span>&gt;<br />
+                        </code>
+                      </div>
+                      <p class="font-body py-2">Example Explained</p>
+                      <ul>
+                        <li>
+                          <p class="font-body">
+                            The <code>&lt;!DOCTYPE html&gt;</code> declaration
+                            defines that this document is an HTML5 document
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            The <code>&lt;html&gt;</code> element is the root
+                            element of an HTML page
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            The <code>&lt;head&gt;</code> element contains meta
+                            information about the HTML page
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            The <code>&lt;body&gt;</code> element defines the
+                            document's body, and is a container for all the
+                            visible contents, such as headings, paragraphs,
+                            images, hyperlinks, tables, lists, etc.
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            The <code>&lt;h1&gt;</code> element defines a large
+                            heading
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            The <code>&lt;p&gt;</code> element defines a
+                            paragraph
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        What is an HTML Element?
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body pb-2">
+                        An HTML element is defined by a start tag, some content,
+                        and an end tag:
+                      </p>
+                      <p class="font-body text-black fs-3 pb-2">
+                        &lt;<span class="text-brown">tagname</span>&gt; Content
+                        goes here... &lt;<span class="text-brown">/tagname</span
+                        >&gt;
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                HTML Editors #2
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <h3 class="text-black font-quicksand-600">
+                  Learn HTML Using Notepad or TextEdit
+                </h3>
+                <div class="desc">
+                  <p class="font-body mb-2">
+                    Web pages can be created and modified by using professional
+                    HTML editors. However, for learning HTML we recommend a
+                    simple text editor like Notepad (PC) or TextEdit (Mac). We
+                    believe that using a simple text editor is a good way to
+                    learn HTML. Follow the steps below to create your first web
+                    page with Notepad or TextEdit.
+                  </p>
+                  <ul>
+                    <li class="mb-3">
+                      <div class="heading">
+                        <h3 class="font-quicksand-600 text-black">
+                          Step 1: Open Notepad (PC)
+                        </h3>
+                      </div>
+                      <div class="the-material">
+                        <b class="font-body text-black mb-2"
+                          >Windows 8 or later:</b
+                        >
+                        <p class="font-body ms-2">
+                          Open the <b class="text-black">Start Screen</b> (the
+                          window symbol at the bottom left on your screen). Type
+                          <b class="text-black"></b>.
+                        </p>
+                        <b class="font-body text-black my-2"
+                          >Windows 7 or earlier:</b
+                        >
+                        <p class="font-body ms-2">
+                          Open the
+                          <b class="text-black"
+                            >Start &gt; Programs &gt; Accessories &gt;
+                            Notepad</b
+                          >
+                        </p>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="heading">
+                        <h3 class="font-quicksand-600 text-black">
+                          Step 1: Open TextEdit (Mac)
+                        </h3>
+                      </div>
+                      <div class="the-material">
+                        <p class="font-body">
+                          Open
+                          <b class="text-black"
+                            >Finder &gt; Applications &gt; TextEdit</b
+                          >
+                        </p>
+                        <p class="font-body">
+                          Also change some preferences to get the application to
+                          save files correctly. In
+                          <b class="text-black">Preferences &gt; Format &gt; </b
+                          >choose <b class="text-black">"Plain Text"</b>
+                        </p>
+                        <p class="font-body">
+                          Then under "Open and Save", check the box that says
+                          "Display HTML files as HTML code instead of formatted
+                          text".
+                        </p>
+                        <b class="font-body text-black my-2"
+                          >Then open a new document to place the code.</b
+                        >
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="heading">
+                        <h3 class="font-quicksand-600 text-black">
+                          Step 2: Write Some HTML
+                        </h3>
+                      </div>
+                      <div class="the-material">
+                        <p class="font-body pb-2">
+                          Write or copy the following HTML code into Notepad:
+                        </p>
+                        <div class="code">
+                          <code class="text-black ps-0">
+                            &lt;<span class="text-brown">!DOCTYPE</span>
+                            <span class="text-danger">html</span>&gt;<br />
+                            &lt;<span class="text-brown">html</span>&gt;<br />
+                            &lt;<span class="text-brown">body</span
+                            >&gt;<br /><br />
+                            &lt;<span class="text-brown">h1</span>&gt;My First
+                            Web Page&lt;<span class="text-brown">/h1</span
+                            >&gt;<br />
+                            &lt;<span class="text-brown">p</span>&gt;My First
+                            Paragraph&lt;<span class="text-brown">/p</span
+                            >&gt;<br /><br />
+                            &lt;<span class="text-brown">/body</span>&gt;<br />
+                            &lt;<span class="text-brown">/html</span>&gt;<br />
+                          </code>
+                        </div>
+                        <div
+                          class="image-accordion overflow-hidden my-3"
+                          style="
+                            height: auto;
+                            width: 600px;
+                            border-radius: 10px;
+                          "
+                        >
+                          <img
+                            src="../../assets/images/courses/html-notepad.png"
+                            style="width: 100%"
+                          />
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="heading">
+                        <h3 class="font-quicksand-600 text-black">
+                          Step 3: Save the HTML Page
+                        </h3>
+                      </div>
+                      <div class="the-material">
+                        <p class="font-body pb-2">
+                          Save the file on your computer. Select
+                          <b class="text-black">File > Save</b> as in the
+                          Notepad menu.
+                        </p>
+                        <p class="font-body pb-2">
+                          Name the file
+                          <b class="text-black">"index.html"</b> and set the
+                          encoding to <b class="text-black">UTF-8</b> (which is
+                          the preferred encoding for HTML files).
+                        </p>
+                        <div
+                          class="image-accordion overflow-hidden my-3"
+                          style="
+                            height: auto;
+                            width: 600px;
+                            border-radius: 10px;
+                          "
+                        >
+                          <img
+                            src="../../assets/images/courses/sv-html.png"
+                            style="width: 100%"
+                          />
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="heading">
+                        <h3 class="font-quicksand-600 text-black">
+                          Step 4: View the HTML Page in Your Browser
+                        </h3>
+                      </div>
+                      <div class="the-material">
+                        <p class="font-body pb-2">
+                          Open the saved HTML file in your favorite browser
+                          (double click on the file, or right-click - and choose
+                          "Open with").
+                        </p>
+                        <p class="font-body pb-2">
+                          The result will look much like this:
+                        </p>
+                        <div
+                          class="image-accordion overflow-hidden my-3"
+                          style="
+                            height: 300px;
+                            width: 600px;
+                            border-radius: 10px;
+                            border: 1px solid #000;
+                          "
+                        >
+                          <img
+                            src="../../assets/images/courses/preview-html.png"
+                            style="width: 100%; object-fit: cover"
+                          />
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                disabled
+                class="w-100 font-quicksand-600"
+                style="
+                  font-size: 1rem;
+                  padding: 1rem 1.25rem;
+                  border-radius: 25px;
+                  background: transparent;
+                "
+              >
+                Material Coming Soon
+              </button>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="pt-5 px-md-0 px-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget subscribe no-box">
+              <h5 class="widget-title">
+                <img src="../../assets/images/logos/logo-white.svg" alt="" />
+                <span></span>
+              </h5>
+              <p class="font-body">
+                CourseLab is your dedicated platform for transformative learning
+                experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Quick Links<span></span>
+              </h5>
+              <ul class="thumbnail-widget">
+                <li>
+                  <a
+                    href="../../index.html"
+                    class="font-body text-decoration-none"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../about.html" class="font-body text-decoration-none"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../courses.html"
+                    class="font-body text-decoration-none"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../contact.html"
+                    class="font-body text-decoration-none"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Location<span></span>
+              </h5>
+              <p class="font-body">Cikeusik, Cidahu, Kuningan, West Java.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Contact Us<span></span>
+              </h5>
+
+              <p>
+                <a href="#" class="font-body text-decoration-none"
+                  >admin@courselab.com</a
+                >
+              </p>
+              <div
+                class="d-flex mt-2 justify-content-start align-items-center gap-3"
+              >
+                <a href="" class="icon-footer">
+                  <i data-feather="instagram"></i>
+                </a>
+                <a href="" class="icon-footer">
+                  <i data-feather="youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center copy">
+        <p class="font-body text-white py-4">
+          Copyright CourseLab. &copy; 2023. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <!-- bootstrap js -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- feather icon -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- wow js -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+
+  <!-- my js -->
+  <script src="../../assets/js/preload.js"></script>
+  <script>
+    function toTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script>
+    feather.replace();
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        document.querySelector(".back-to-top").classList.add("active");
+      } else {
+        document.querySelector(".back-to-top").classList.remove("active");
+      }
+    });
+  </script>
+  <script>
+    new WOW().init();
+  </script>
+</html>

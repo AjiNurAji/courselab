@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseLab | CSS3</title>
+    <link rel="icon" href="../../assets/images/logos/favicon.svg" />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- wow js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="../../assets/css/font.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-primary" id="navbar-course">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="../../assets/images/logos/logo-white.svg" alt="CourseLab" />
+        </a>
+
+        <a href="../courses.html" class="btn btn-warning">
+          <i data-feather="arrow-left"></i>
+        </a>
+      </div>
+    </nav>
+
+    <section id="preload" class="vh-100 w-100 position-fixed active">
+      <div
+        class="h-100 w-100 bg-light-blue d-flex flex-column justify-content-center align-items-center"
+      >
+        <img src="../../assets/images/logos/favicon.svg" />
+        <span class="loader"> </span>
+      </div>
+    </section>
+
+    <button
+      onclick="toTop()"
+      class="back-to-top p-3 rounded-pill bg-primary position-fixed"
+    >
+      <i data-feather="arrow-up"></i>
+    </button>
+
+    <section class="py-5 bg-primary" id="material">
+      <div class="container position-relative h-100">
+        <div class="heading d-flex flex-column flex-md-row gap-4">
+          <div class="image">
+            <img src="../../assets/images/courses/css.webp" alt="JavaScript" />
+          </div>
+          <div class="title">
+            <h1 class="font-quicksand-700 text-white">CSS Tutorial</h1>
+            <p class="font-body text-light-blue mb-3">
+              CSS is the language we use to style an HTML document. CSS
+              describes how HTML elements should be displayed. This tutorial
+              will teach you CSS from basic to advanced.
+            </p>
+            <p class="font-body text-light-blue">
+              In this tutorial, the learning speed is your choice. Everything is
+              up to you. If you are struggling, take a break, or re-read the
+              material. Always make sure you understand all the
+              "Try-it-Yourself" examples. The only way to become a clever
+              programmer is to: Practice. Practice. Practice. Code. Code. Code !
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light-blue">
+      <div class="container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                CSS Introduction #1
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <ul>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        What is CSS?
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <ul>
+                        <li>
+                          <p class="font-body">
+                            CSS stands for Cascading Style Sheets
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            CSS describes how HTML elements are to be displayed
+                            on screen, paper, or in other media
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            CSS saves a lot of work. It can control the layout
+                            of multiple web pages all at once
+                          </p>
+                        </li>
+                        <li>
+                          <p class="font-body">
+                            External stylesheets are stored in CSS files
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        Why Use CSS?
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body pb-2">
+                        CSS is used to define styles for your web pages,
+                        including the design, layout and variations in display
+                        for different devices and screen sizes.
+                      </p>
+                      <p class="font-body py-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          <span class="text-brown">body</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">background-color:</span
+                          >&nbsp;<span class="text-primary">lightblue</span
+                          >;<br />
+                          }<br /><br />
+                          <span class="text-brown">h1</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">color:</span>&nbsp;<span
+                            class="text-primary"
+                            >white</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">text-align:</span
+                          >&nbsp;<span class="text-primary">center</span>;<br />
+                          }<br /><br />
+                          <span class="text-brown">p</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">font-family:</span
+                          >&nbsp;<span class="text-primary">verdana</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">font-size:</span>&nbsp;<span
+                            class="text-primary"
+                            >20px</span
+                          >;<br />
+                          }
+                        </code>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        CSS Solved a Big Problem
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body pb-2">
+                        HTML was NEVER intended to contain tags for formatting a
+                        web page!
+                      </p>
+                      <p class="font-body pb-2">
+                        HTML was created to describe the content of a web page,
+                        like:
+                      </p>
+                      <p class="font-body pb-2">
+                        &lt;h1&gt; This is a heading&lt;/h1&gt;
+                      </p>
+                      <p class="font-body pb-2">
+                        &lt;p&gt; This is a paragraph&lt;/p&gt;
+                      </p>
+                      <p class="font-body pb-2">
+                        When tags like &lt;font&gt;, and color attributes were
+                        added to the HTML 3.2 specification, it started a
+                        nightmare for web developers. Development of large
+                        websites, where fonts and color information were added
+                        to every single page, became a long and expensive
+                        process.
+                      </p>
+                      <p class="font-body pb-2">
+                        To solve this problem, the World Wide Web Consortium
+                        (W3C) created CSS.
+                      </p>
+                      <p class="font-body pb-2">
+                        CSS removed the style formatting from the HTML page!
+                      </p>
+                      <div class="note mt-3">
+                        <p class="font-body font-quicksand-600">
+                          If you don't know what HTML is, we suggest that you
+                          read our <a href="./c-html.html">HTML Tutorial</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                CSS Syntax #2
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <div class="images-accordion">
+                  <img
+                    src="../../assets/images/vektor/cssSyntax.svg"
+                    alt="syntax css"
+                  />
+                </div>
+                <div class="desc">
+                  <p class="font-body mb-2">
+                    The selector points to the HTML element you want to style.
+                  </p>
+                  <p class="font-body mb-2">
+                    The declaration block contains one or more declarations
+                    separated by semicolons.
+                  </p>
+                  <p class="font-body mb-2">
+                    Each declaration includes a CSS property name and a value,
+                    separated by a colon.
+                  </p>
+                  <p class="font-body mb-3">
+                    Multiple CSS declarations are separated with semicolons, and
+                    declaration blocks are surrounded by curly braces.
+                  </p>
+                  <p class="font-body py-2">Example</p>
+                  <p class="font-body py-2 ps-2">
+                    In this example all &lt;p&gt; elements will be
+                    center-aligned, with a red text color:
+                  </p>
+                  <div class="code">
+                    <code class="text-black code ps-0">
+                      <span class="text-brown">p</span>&nbsp;{
+                      <br />
+                      &nbsp; &nbsp; &nbsp;
+                      <span class="text-danger">color</span>:&nbsp;<span
+                        class="text-primary"
+                        >blue</span
+                      >;<br />
+                      &nbsp; &nbsp; &nbsp;
+                      <span class="text-danger">text-align</span>:&nbsp;<span
+                        class="text-primary"
+                        >center</span
+                      >;<br />
+                      }
+                    </code>
+                  </div>
+                  <p class="font-body py-2">Example Explained</p>
+                  <ul>
+                    <li>
+                      <p class="font-body">
+                        <code>p</code> is a selector in CSS (it points to the
+                        HTML element you want to style: &lt;p&gt;).
+                      </p>
+                    </li>
+                    <li>
+                      <p class="font-body">
+                        <code>color</code> is a property, and
+                        <code>red</code> is the property value
+                      </p>
+                    </li>
+                    <li>
+                      <p class="font-body">
+                        <code>text-align</code> is a property, and
+                        <code>center</code> is the property value
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                CSS Selectors #3
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <p class="font-body">
+                  A CSS selector selects the HTML element(s) you want to style.
+                </p>
+
+                <ul class="mt-2">
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        The CSS element Selector
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body mb-2">
+                        The element selector selects HTML elements based on the
+                        element name.
+                      </p>
+
+                      <p class="font-body my-2">Example</p>
+                      <p class="font-body ps-2 mb-2">
+                        Here, all &lt;p&gt; elements on the page will be
+                        center-aligned, with a blue text color:
+                      </p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          <span class="text-brown">p</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">color</span>:&nbsp;<span
+                            class="text-primary"
+                            >blue</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">text-align</span
+                          >:&nbsp;<span class="text-primary">center</span
+                          >;<br />
+                          }
+                        </code>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        The CSS id Selector
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        The id selector uses the id attribute of an HTML element
+                        to select a specific element. The id of an element is
+                        unique within a page, so the id selector is used to
+                        select one unique element! To select an element with a
+                        specific id, write a hash (#) character, followed by the
+                        id of the element.
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <p class="font-body ps-2 mb-2">
+                        The CSS rule below will be applied to the HTML element
+                        with id="para1":
+                      </p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          <span class="text-brown">#para1</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">color</span>:&nbsp;<span
+                            class="text-primary"
+                            >blue</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">text-align</span
+                          >:&nbsp;<span class="text-primary">center</span
+                          >;<br />
+                          }
+                        </code>
+                      </div>
+
+                      <div class="note mt-3">
+                        <p class="font-body font-quicksand-600">
+                          <b class="text-black">Note:</b> An id name cannot
+                          start with a number!
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        The CSS class Selector
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        The class selector selects HTML elements with a specific
+                        class attribute. To select elements with a specific
+                        class, write a period (.) character, followed by the
+                        class name.
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <p class="font-body ps-2 mb-2">
+                        In this example all HTML elements with class="center"
+                        will be blue and center-aligned:
+                      </p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          <span class="text-brown">.center</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">color</span>:&nbsp;<span
+                            class="text-primary"
+                            >blue</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">text-align</span
+                          >:&nbsp;<span class="text-primary">center</span
+                          >;<br />
+                          }
+                        </code>
+                      </div>
+                      <p class="font-body mt-2">
+                        You can also specify that only specific HTML elements
+                        should be affected by a class.
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <p class="font-body ps-2 mb-2">
+                        In this example only &lt;p&gt; elements with
+                        class="center" will be red and center-aligned:
+                      </p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          <span class="text-brown">p.center</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">color</span>:&nbsp;<span
+                            class="text-primary"
+                            >blue</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">text-align</span
+                          >:&nbsp;<span class="text-primary">center</span
+                          >;<br />
+                          }
+                        </code>
+                      </div>
+                      <p class="font-body mt-2">
+                        HTML elements can also refer to more than one class.
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <p class="font-body ps-2 mb-2">
+                        In this example only &lt;p&gt; element will be styled
+                        according to class="center" and to class="large":
+                      </p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">p</span>&nbsp;<span
+                            class="text-danger"
+                            >class</span
+                          >=<span class="text-brown">"center large"</span
+                          >&gt;This paragraph refers to two classes.&lt;/p&gt;
+                        </code>
+                      </div>
+
+                      <div class="note mt-3">
+                        <p class="font-body font-quicksand-600">
+                          <b class="text-black">Note:</b> A class name cannot
+                          start with a number!
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        The CSS Universal Selector
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        The universal selector (*) selects all HTML elements on
+                        the page.
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <p class="font-body ps-2 mb-2">
+                        The CSS rule below will affect every HTML element on the
+                        page:
+                      </p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          <span class="text-brown">*</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">color</span>:&nbsp;<span
+                            class="text-primary"
+                            >blue</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">text-align</span
+                          >:&nbsp;<span class="text-primary">center</span
+                          >;<br />
+                          }
+                        </code>
+                      </div>
+                      <p class="font-body mt-2">
+                        You can also specify that only specific HTML elements
+                        should be affected by a class.
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <p class="font-body ps-2 mb-2">
+                        In this example only &lt;p&gt; elements with
+                        class="center" will be red and center-aligned:
+                      </p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          <span class="text-brown">p.center</span>&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">color</span>:&nbsp;<span
+                            class="text-primary"
+                            >blue</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">text-align</span
+                          >:&nbsp;<span class="text-primary">center</span
+                          >;<br />
+                          }
+                        </code>
+                      </div>
+                      <p class="font-body mt-2">
+                        HTML elements can also refer to more than one class.
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <p class="font-body ps-2 mb-2">
+                        In this example only &lt;p&gt; element will be styled
+                        according to class="center" and to class="large":
+                      </p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          &lt;<span class="text-brown">p</span>&nbsp;<span
+                            class="text-danger"
+                            >class</span
+                          >=<span class="text-brown">"center large"</span
+                          >&gt;This paragraph refers to two classes.&lt;/p&gt;
+                        </code>
+                      </div>
+
+                      <div class="note mt-3">
+                        <p class="font-body font-quicksand-600">
+                          <b class="text-black">Note:</b> A class name cannot
+                          start with a number!
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        The CSS Grouping Selector
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body">
+                        The grouping selector selects all the HTML elements with
+                        the same style definitions. To group selectors, separate
+                        each selector with a comm
+                      </p>
+                      <p class="font-body my-2">Example</p>
+                      <div class="code">
+                        <code class="text-black code ps-0">
+                          <span class="text-brown">h1,&nbsp;h2,&nbsp;p</span
+                          >&nbsp;{
+                          <br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">color</span>:&nbsp;<span
+                            class="text-primary"
+                            >blue</span
+                          >;<br />
+                          &nbsp; &nbsp; &nbsp;
+                          <span class="text-danger">text-align</span
+                          >:&nbsp;<span class="text-primary">center</span
+                          >;<br />
+                          }
+                        </code>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                disabled
+                class="w-100 font-quicksand-600"
+                style="
+                  font-size: 1rem;
+                  padding: 1rem 1.25rem;
+                  border-radius: 25px;
+                  background: transparent;
+                "
+              >
+                Material Coming Soon
+              </button>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="pt-5 px-md-0 px-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget subscribe no-box">
+              <h5 class="widget-title">
+                <img src="../../assets/images/logos/logo-white.svg" alt="" />
+                <span></span>
+              </h5>
+              <p class="font-body">
+                CourseLab is your dedicated platform for transformative learning
+                experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Quick Links<span></span>
+              </h5>
+              <ul class="thumbnail-widget">
+                <li>
+                  <a
+                    href="../../index.html"
+                    class="font-body text-decoration-none"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../about.html" class="font-body text-decoration-none"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../courses.html"
+                    class="font-body text-decoration-none"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../contact.html"
+                    class="font-body text-decoration-none"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Location<span></span>
+              </h5>
+              <p class="font-body">Cikeusik, Cidahu, Kuningan, West Java.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Contact Us<span></span>
+              </h5>
+
+              <p>
+                <a href="#" class="font-body text-decoration-none"
+                  >admin@courselab.com</a
+                >
+              </p>
+              <div
+                class="d-flex mt-2 justify-content-start align-items-center gap-3"
+              >
+                <a href="" class="icon-footer">
+                  <i data-feather="instagram"></i>
+                </a>
+                <a href="" class="icon-footer">
+                  <i data-feather="youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center copy">
+        <p class="font-body text-white py-4">
+          Copyright CourseLab. &copy; 2023. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <!-- bootstrap js -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- feather icon -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- wow js -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+
+  <!-- my js -->
+  <script src="../../assets/js/preload.js"></script>
+  <script>
+    function toTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script>
+    feather.replace();
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        document.querySelector(".back-to-top").classList.add("active");
+      } else {
+        document.querySelector(".back-to-top").classList.remove("active");
+      }
+    });
+  </script>
+  <script>
+    new WOW().init();
+  </script>
+</html>
