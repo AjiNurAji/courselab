@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseLab | Figma</title>
+    <link rel="icon" href="../../assets/images/logos/favicon.svg" />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- wow js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="../../assets/css/font.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-primary" id="navbar-course">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="../../assets/images/logos/logo-white.svg" alt="CourseLab" />
+        </a>
+
+        <a href="../courses.html" class="btn btn-warning">
+          <i data-feather="arrow-left"></i>
+        </a>
+      </div>
+    </nav>
+
+    <section id="preload" class="vh-100 w-100 position-fixed active">
+      <div
+        class="h-100 w-100 bg-light-blue d-flex flex-column justify-content-center align-items-center"
+      >
+        <img src="../../assets/images/logos/favicon.svg" />
+        <span class="loader"> </span>
+      </div>
+    </section>
+
+    <button
+      onclick="toTop()"
+      class="back-to-top p-3 rounded-pill bg-primary position-fixed"
+    >
+      <i data-feather="arrow-up"></i>
+    </button>
+
+    <section class="py-5 bg-primary" id="material">
+      <div class="container position-relative h-100">
+        <div class="heading d-flex flex-column flex-md-row gap-4">
+          <div class="image">
+            <img
+              src="../../assets/images/courses/figma.webp"
+              alt="JavaScript"
+            />
+          </div>
+          <div class="title">
+            <h1 class="font-quicksand-700 text-white">Figma Tutorial</h1>
+            <p class="font-body text-light-blue">
+              What's the meaning of one million application downloads, if all of
+              them are uninstalled immediately when they see the experience and
+              interface are a mess. Master the skills to prevent this from
+              happening.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light-blue">
+      <div class="container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed font-quicksand-600"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Introduction to Figma #1
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body d-flex flex-column align-items-start gap-2"
+              >
+                <ul>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        What is Figma?
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body mt-2">
+                        Figma is an application that is often used by designers
+                        to create prototypes. Through the figma application,
+                        each user can work together in real time. In this
+                        material you will get to know Figma, starting from the
+                        functions and advantages of Figma, as well as learning
+                        to register a Figma account.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        Why Use Figma?
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body mb-2">
+                        Figma has become the tool of choice for designers and
+                        collaborative teams for several compelling reasons,
+                        making it an indispensable option. One of its key
+                        strengths lies in its cloud-based nature, enabling
+                        real-time collaboration among team members, regardless
+                        of their geographical locations. This facilitates
+                        seamless teamwork, allowing designers, developers, and
+                        stakeholders to work together on a project, share
+                        instant feedback, and maintain a centralized version
+                        history.
+                      </p>
+                      <p class="font-body mb-2">
+                        Furthermore, Figma stands out with its robust design
+                        features, providing a diverse set of tools for creating
+                        and prototyping user interfaces efficiently. The
+                        browser-based accessibility of Figma eliminates the need
+                        for software installations, making cross-platform usage
+                        smooth. Figma's commitment to innovation is evident in
+                        its regular updates, ensuring users have access to the
+                        latest features and capabilities. Overall, the
+                        combination of Figma's collaborative capabilities,
+                        powerful design tools, and adaptability makes it a
+                        comprehensive solution for modern design workflows.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="heading">
+                      <h3 class="font-quicksand-600 text-black">
+                        Create a Figma Account
+                      </h3>
+                    </div>
+                    <div class="the-material">
+                      <p class="font-body pb-2">
+                        Creating an account on Figma is a straightforward
+                        process. Follow these steps to create a Figma account:
+                      </p>
+                      <ol class="mt-3 font-quicksand-600 text-black">
+                        <li class="mb-3">
+                          <div class="header">
+                            <p class="font-quicksand-600 text-black">
+                              Visit the Figma Website:
+                            </p>
+                            <p class="font-body">
+                              Go to the official Figma website by typing "Figma"
+                              in your preferred search engine or directly
+                              entering "<a
+                                href="https://figma.com"
+                                target="_blank"
+                                >www.figma.com</a
+                              >" in your web browser's address bar.
+                            </p>
+                          </div>
+                        </li>
+                        <li class="mb-3">
+                          <div class="header">
+                            <p class="font-quicksand-600 text-black">
+                              Sign Up:
+                            </p>
+                            <p class="font-body">
+                              Once you are on the Figma website, look for a
+                              "Sign Up" or "Try Figma for Free" button. Click on
+                              it to initiate the sign-up process.
+                            </p>
+                          </div>
+                        </li>
+                        <li class="mb-3">
+                          <div class="header">
+                            <p class="font-quicksand-600 text-black">
+                              Create an Account:
+                            </p>
+                            <p class="font-body">
+                              Fill in the required information to create your
+                              Figma account. This typically includes providing
+                              your email address, creating a password, and
+                              agreeing to the terms of service. You may also
+                              have the option to sign up using a Google account
+                              or another third-party service.
+                            </p>
+                          </div>
+                        </li>
+                        <li class="mb-3">
+                          <div class="header">
+                            <p class="font-quicksand-600 text-black">
+                              Verification:
+                            </p>
+                            <p class="font-body">
+                              After providing the necessary information, you
+                              might need to verify your email address. Figma may
+                              send you a verification email with a link. Click
+                              on the link in the email to confirm your account.
+                            </p>
+                          </div>
+                        </li>
+                        <li class="mb-3">
+                          <div class="header">
+                            <p class="font-quicksand-600 text-black">
+                              Complete the Setup:
+                            </p>
+                            <p class="font-body">
+                              Follow any additional on-screen instructions to
+                              complete the account setup process. This may
+                              include setting up your profile, choosing
+                              preferences, or selecting your role (designer,
+                              developer, etc.).
+                            </p>
+                          </div>
+                        </li>
+                        <li class="mb-3">
+                          <div class="header">
+                            <p class="font-quicksand-600 text-black">
+                              Explore Figma:
+                            </p>
+                            <p class="font-body">
+                              Once your account is set up, you can explore the
+                              Figma interface, start creating designs, or
+                              collaborate with others on projects.
+                            </p>
+                          </div>
+                        </li>
+                      </ol>
+                      <p class="font-body mt-3">
+                        Remember to check Figma's latest interface and features,
+                        as they may update over time. If you encounter any
+                        issues during the sign-up process, refer to Figma's
+                        support resources or contact their support team for
+                        assistance.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                disabled
+                class="w-100 font-quicksand-600"
+                style="
+                  font-size: 1rem;
+                  padding: 1rem 1.25rem;
+                  border-radius: 25px;
+                  background: transparent;
+                "
+              >
+                Material Coming Soon
+              </button>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="pt-5 px-md-0 px-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget subscribe no-box">
+              <h5 class="widget-title">
+                <img src="../../assets/images/logos/logo-white.svg" alt="" />
+                <span></span>
+              </h5>
+              <p class="font-body">
+                CourseLab is your dedicated platform for transformative learning
+                experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Quick Links<span></span>
+              </h5>
+              <ul class="thumbnail-widget">
+                <li>
+                  <a
+                    href="../../index.html"
+                    class="font-body text-decoration-none"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../about.html" class="font-body text-decoration-none"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../courses.html"
+                    class="font-body text-decoration-none"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../contact.html"
+                    class="font-body text-decoration-none"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Location<span></span>
+              </h5>
+              <p class="font-body">Cikeusik, Cidahu, Kuningan, West Java.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title font-quicksand-600">
+                Contact Us<span></span>
+              </h5>
+
+              <p>
+                <a href="#" class="font-body text-decoration-none"
+                  >admin@courselab.com</a
+                >
+              </p>
+              <div
+                class="d-flex mt-2 justify-content-start align-items-center gap-3"
+              >
+                <a href="" class="icon-footer">
+                  <i data-feather="instagram"></i>
+                </a>
+                <a href="" class="icon-footer">
+                  <i data-feather="youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center copy">
+        <p class="font-body text-white py-4">
+          Copyright CourseLab. &copy; 2023. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <!-- bootstrap js -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- feather icon -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- wow js -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+
+  <!-- my js -->
+  <script src="../../assets/js/preload.js"></script>
+  <script>
+    function toTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script>
+    feather.replace();
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        document.querySelector(".back-to-top").classList.add("active");
+      } else {
+        document.querySelector(".back-to-top").classList.remove("active");
+      }
+    });
+  </script>
+  <script>
+    new WOW().init();
+  </script>
+</html>
