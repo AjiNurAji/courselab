@@ -291,7 +291,9 @@ body {
   z-index: 9999;
 }
 
-.loader, .loader:before, .loader:after {
+.loader,
+.loader:before,
+.loader:after {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
@@ -308,7 +310,7 @@ body {
 }
 .loader:before,
 .loader:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
 }
@@ -321,10 +323,15 @@ body {
 }
 
 @keyframes bblFadInOut {
-  0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
-  40% { box-shadow: 0 2.5em 0 0 }
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
 }
-    
 
 /* body text */
 .body-text {
@@ -790,6 +797,7 @@ footer a:hover {
 .widget-title img {
   width: 100%;
 }
+
 .widget-title span {
   background: var(--color-yellow) none repeat scroll 0 0;
   display: block;
@@ -798,6 +806,7 @@ footer a:hover {
   position: relative;
   width: 20%;
 }
+
 .widget-title span::after {
   background: inherit;
   content: "";
@@ -806,6 +815,7 @@ footer a:hover {
   top: -4px;
   width: 50%;
 }
+
 .widget-title.text-center span,
 .widget-title.text-center span::after {
   margin-left: auto;
@@ -884,9 +894,70 @@ footer a:hover {
   -o-border-radius: var(--border-radius) !important;
 }
 
+.video-wrapper {
+  width: 50%;
+  height: 315px;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#team .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#team .card-image {
+  margin: 15px 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--color-blue);
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#team .card-image img[alt='Aji'] {
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+}
+
+#team .card-image img[alt='Reza'] {
+  transform: translateY(-80px);
+  -webkit-transform: translateY(-80px);
+  -moz-transform: translateY(-80px);
+  -ms-transform: translateY(-80px);
+  -o-transform: translateY(-80px);
+}
+
+#team .card-image img {
+  object-fit: cover;
+  width: 100%;
+}
+
 @media (max-width: 992px) {
   #about p {
     width: 100% !important;
+  }
+
+  .video-wrapper {
+    width: 100%;
   }
 
   #hero,

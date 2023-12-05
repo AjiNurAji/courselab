@@ -6,4 +6,4 @@ setTimeout(() => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
   preload.classList.remove("active");
-}, 2000);
+}, 1000);
