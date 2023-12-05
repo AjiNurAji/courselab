@@ -154,7 +154,7 @@
           not hesitate to contact us.
         </p>
         <div class="container-contact my-5 wow bounceInUp" data-wow-delay="2s">
-          <form action="" class="d-flex flex-column gap-3">
+          <form class="d-flex flex-column gap-3" method="post" id="form-input">
             <div>
               <label for="fname" class="mb-1">First Name</label>
               <input
@@ -196,7 +196,11 @@
               ></textarea>
             </div>
 
-            <button class="btn btn-primary font-quicksand-600" type="submit">
+            <button
+              class="btn btn-primary font-quicksand-600"
+              type="button"
+              onclick="show()"
+            >
               Send
             </button>
           </form>
@@ -296,6 +300,9 @@
       </div>
     </footer>
   </body>
+
+  <!-- sweetalert js -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- bootstrap js -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -334,5 +341,49 @@
     };
 
     window.addEventListener("scroll", scrollHandle);
+  </script>
+  <script>
+    function show() {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+
+      if (
+        document.getElementById("fname").value == "" ||
+        document.getElementById("lname").value == ""
+      ) {
+        Toast.fire({
+          icon: "error",
+          title: "Please firstname and lastname!",
+        });
+      } else if (
+        document.getElementById("email").value == "" ||
+        !document.getElementById("email").value.includes("@")
+      ) {
+        Toast.fire({
+          icon: "error",
+          title: "Please enter a valid email!",
+        });
+      } else if (document.getElementById("subject").value == "") {
+        Toast.fire({
+          icon: "error",
+          title: "Please enter a subject or message!",
+        });
+      } else {
+        document.getElementById("form-input").reset();
+        Toast.fire({
+          icon: "success",
+          title: "Your subject or message alredy sended!",
+        });
+      }
+    }
   </script>
 </html>

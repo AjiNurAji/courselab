@@ -89,7 +89,7 @@ body {
 
 /* Navbar edited */
 .navbar {
-  z-index: 9999;
+  z-index: 999;
 }
 
 .navbar.active {

@@ -66,7 +66,7 @@
               Welcome back to CourseLab. Lest's sign in below!
             </p>
           </div>
-          <form method="post" class="d-flex flex-column gap-3">
+          <form class="d-flex flex-column gap-3" id="form-input">
             <div>
               <label for="email" class="mb-1">Email</label>
               <input
@@ -123,7 +123,7 @@
     </section>
   </body>
   <!-- sweetalert js -->
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- bootstrap js -->
   <script
@@ -142,13 +142,35 @@
   </script>
   <script>
     function show() {
-      swal({
-        title: "Login successful",
-        text: "Welcome to courselab 👋",
-        icon: "success",
-        button: false,
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
         timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
       });
+
+      if (document.getElementById("email").value == "" || !document.getElementById("email").value.includes("@")) {
+        Toast.fire({
+          icon: "error",
+          title: "Please enter a valid email!",
+        });
+      } else if(document.getElementById("password").value == "") {
+        Toast.fire({
+          icon: "error",
+          title: "Please enter a password!",
+        });
+      } else {
+        document.getElementById('form-input').reset()
+        Toast.fire({
+          icon: "success",
+          title: "Sign in successfully",
+        });
+      }
     }
   </script>
 </html>

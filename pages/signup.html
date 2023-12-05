@@ -70,7 +70,7 @@
               Welcome to CourseLab. Lest's sign up below!
             </p>
           </div>
-          <form class="d-flex flex-column gap-3" method="post">
+          <form class="d-flex flex-column gap-3" method="post" id="form-input">
             <div
               class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
             >
@@ -110,14 +110,14 @@
               <select
                 name="courses"
                 id="course"
-                class="input py-3 rounded font-body w-100"
+                class="input p-3 rounded font-body w-100"
               >
-                <option disabled selected>Pilih Course</option>
-                <option value="">JavaScript</option>
-                <option value="">HTML5</option>
-                <option value="">CSS3</option>
-                <option value="">Figma</option>
-                <option value="">English</option>
+                <option disabled selected value="0">Select course</option>
+                <option value="1">JavaScript</option>
+                <option value="2">HTML5</option>
+                <option value="3">CSS3</option>
+                <option value="4">Figma</option>
+                <option value="5">English</option>
               </select>
             </div>
             <div>
@@ -135,8 +135,8 @@
               <input
                 type="password"
                 class="input p-3 w-100 rounded font-body"
-                id="password"
-                name="password"
+                id="confirmpassword"
+                name="confirm_password"
                 placeholder="Confirm password.."
               />
             </div>
@@ -164,7 +164,7 @@
     </section>
   </body>
   <!-- sweetalert js -->
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- bootstrap js -->
   <script
@@ -186,13 +186,55 @@
   </script>
   <script>
     function show() {
-      return swal({
-        title: "Successfully!",
-        text: "You are new student!",
-        icon: "success",
-        button: false,
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
         timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
       });
+
+      if (document.getElementById("fname").value == "" || document.getElementById("lastname").value == '') {
+        Toast.fire({
+          icon: "error",
+          title: "Please firstname and lastname!",
+        });
+      } else if(document.getElementById("email").value == "" || !document.getElementById("email").value.includes('@')) {
+        Toast.fire({
+          icon: "error",
+          title: "Please enter a valid email!",
+        });
+      } else if (Number(document.getElementById('course').value) == 0) {
+        Toast.fire({
+          icon: "error",
+          title: "Please select the course!",
+        });
+      } else if(document.getElementById("password").value == "") {
+        Toast.fire({
+          icon: "error",
+          title: "Please enter a password!",
+        });
+      } else if(document.getElementById("confirmpassword").value == "") {
+        Toast.fire({
+          icon: "error",
+          title: "Please enter a confirm password!",
+        });
+      } else if (document.getElementById("confirmpassword").value !== document.getElementById("password").value) {
+        Toast.fire({
+          icon: "error",
+          title: "Confirm password and password don't match!",
+        });
+      } else {
+        document.getElementById('form-input').reset()
+        Toast.fire({
+          icon: "success",
+          title: "Sign up successfully",
+        });
+      }
     }
   </script>
 </html>
