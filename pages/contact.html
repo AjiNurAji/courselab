@@ -368,11 +368,18 @@
       ) {
         Toast.fire({
           icon: "error",
-          title: "Please firstname and lastname!",
+          title: "Please your firstname and lastname!",
         });
       } else if (
         document.getElementById("email").value == "" ||
         !document.getElementById("email").value.includes("@")
+      ) {
+        Toast.fire({
+          icon: "error",
+          title: "Please enter your email!",
+        });
+      } else if (
+        !document.getElementById("email").value.includes("@") && !document.getElementById("email").value.includes(".")
       ) {
         Toast.fire({
           icon: "error",

@@ -83,10 +83,6 @@ body {
   color: var(--color-gray) !important;
 }
 
-#signup {
-  height: auto !important;
-}
-
 /* Navbar edited */
 .navbar {
   z-index: 999;
@@ -97,6 +93,10 @@ body {
   background: var(--color-white);
   padding: 0.5rem 0 !important;
   box-shadow: 0 0 5px var(--color-black);
+}
+
+.navbar-form {
+  padding: 0.5rem 0 !important;
 }
 
 .icon-navbar {
@@ -425,6 +425,7 @@ body {
 }
 
 .form-check-input,
+#signup .input,
 #signin .input,
 #contact .input {
   border: 1px solid var(--color-gray) !important;
@@ -432,6 +433,7 @@ body {
 
 .form-check-input,
 #signin .input:focus,
+#signup .input:focus,
 #contact .input:focus {
   box-shadow: 0 0 10px #00327c44;
   border: 1px solid var(--color-blue) !important;
@@ -893,11 +895,55 @@ footer a:hover {
 }
 
 .box {
+  background: var(--color-white);
   border-radius: var(--border-radius);
   -webkit-border-radius: var(--border-radius);
   -moz-border-radius: var(--border-radius);
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.123);
+}
+
+#signin, #signup{
+  padding: 2.5rem 0 !important;
+}
+
+@media (min-width:1367px) {
+  #signup {
+    height: 100vh;
+  }
+}
+
+
+
+#signup .box {
+  width: auto;
+  height: fit-content;
+}
+
+#signup .box .logo-title h1 {
+  font-size: 35px;
+}
+
+.hover-warning:hover {
+  color: var(--color-yellow) !important;
+}
+.box .logo-title img {
+  width: 60px;
+}
+
+.box .right-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.left-box {
+  flex: 0 0 55%;
+}
+
+.right-box {
+  flex: 0 0 45%;
 }
 
 #material .heading .image {
@@ -916,6 +962,24 @@ footer a:hover {
 #material .heading .title {
   width: 100%;
   flex: 0 0 65%;
+}
+
+#material .image-mentor {
+  height: 50px;
+  width: 50px;
+}
+
+#material .image-mentor img {
+  width: 100%;
+}
+
+#material .image-mentor img[alt="syarif"],
+#material .image-mentor img[alt="eka"] {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
 }
 
 .accordion .accordion-item,
@@ -963,7 +1027,7 @@ footer a:hover {
   -o-border-radius: 50%;
 }
 
-#team .card-image img[alt='Aji'] {
+#team .card-image img[alt="Aji"] {
   transform: translateY(-20px);
   -webkit-transform: translateY(-20px);
   -moz-transform: translateY(-20px);
@@ -971,7 +1035,7 @@ footer a:hover {
   -o-transform: translateY(-20px);
 }
 
-#team .card-image img[alt='Reza'] {
+#team .card-image img[alt="Reza"] {
   transform: translateY(-80px);
   -webkit-transform: translateY(-80px);
   -moz-transform: translateY(-80px);
@@ -987,6 +1051,19 @@ footer a:hover {
 @media (max-width: 992px) {
   #about p {
     width: 100% !important;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .box .right-box {
+    display: none !important;
+  }
+
+  .box .left-box {
+    flex: 0 0 100%;
+    padding: 2rem 3rem !important;
   }
 
   .video-wrapper {
@@ -1040,6 +1117,12 @@ footer a:hover {
     right: 230px;
   }
 }
+
+/* @media (min-width: 1367px) {
+  #mentors {
+    height: 100%;
+  }
+} */
 
 @media (max-width: 768px) {
   #team .email {
